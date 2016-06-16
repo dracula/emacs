@@ -276,15 +276,7 @@
    `(enh-ruby-heredoc-delimiter-face ((,class (:foreground ,str))))
    `(enh-ruby-string-delimiter-face ((,class (:foreground ,str))))
    `(enh-ruby-regexp-delimiter-face ((,class (:foreground ,str))))
-   `(which-func ((,class (:inherit ,font-lock-function-name-face))))
-   `(powerline-evil-base-face ((t (:foreground ,bg2))))
-   `(powerline-evil-normal-face ((,class (:inherit powerline-evil-base-face :background ,rainbow-6))))
-   `(powerline-evil-insert-face ((,class (:inherit powerline-evil-base-face :background ,rainbow-2))))
-   `(powerline-evil-visual-face ((,class (:inherit powerline-evil-base-face :background ,rainbow-5))))
-   `(powerline-evil-operator-face ((,class (:inherit powerline-evil-base-face :background ,rainbow-4))))
-   `(powerline-evil-replace-face ((,class (:inherit powerline-evil-base-face :background "#ff5555"))))
-   `(powerline-evil-motion-face ((,class (:inherit powerline-evil-base-face :background ,rainbow-3))))
-   `(powerline-evil-emacs-face ((,class (:inherit powerline-evil-base-face :background ,rainbow-7))))))
+   `(which-func ((,class (:inherit ,font-lock-function-name-face))))))
 
 ;;;###autoload
 (when load-file-name
