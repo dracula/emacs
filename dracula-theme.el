@@ -37,7 +37,7 @@
       (comment "#6272a4")
       (func    "#50fa7b")
       (str     "#f1fa8c")
-      (type    "#f8f8f2")
+      (type    "#0189cc")
       (var     "#f8f8f2")
       (warning "#ffb86c")
       (rainbow-1 "#f8f8f2")
