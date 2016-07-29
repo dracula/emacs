@@ -279,6 +279,7 @@
    `(web-mode-html-attr-value-face ((,class (:foreground ,keyword))))
    `(web-mode-warning-face ((,class (:inherit ,font-lock-warning-face))))
    `(web-mode-html-tag-face ((,class (:foreground ,builtin))))
+   `(web-mode-symbol-face ((,class (:foreground ,rainbow-3))))
    `(jde-java-font-lock-package-face ((t (:foreground ,var))))
    `(jde-java-font-lock-public-face ((t (:foreground ,keyword))))
    `(jde-java-font-lock-private-face ((t (:foreground ,keyword))))
