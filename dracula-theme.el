@@ -288,7 +288,16 @@
    `(powerline-evil-operator-face ((,class (:inherit powerline-evil-base-face :background ,rainbow-4))))
    `(powerline-evil-replace-face ((,class (:inherit powerline-evil-base-face :background "#ff5555"))))
    `(powerline-evil-motion-face ((,class (:inherit powerline-evil-base-face :background ,rainbow-3))))
-   `(powerline-evil-emacs-face ((,class (:inherit powerline-evil-base-face :background ,rainbow-7))))))
+   `(powerline-evil-emacs-face ((,class (:inherit powerline-evil-base-face :background ,rainbow-7))))
+   `(rpm-spec-tag-face ((,class (:foreground ,rainbow-2))))
+   `(rpm-spec-obsolete-tag-face ((,class (:inherit font-lock-warning-face))))
+   `(rpm-spec-macro-face ((,class (:foreground ,rainbow-7))))
+   `(rpm-spec-var-face ((,class (:foreground "#a0522d"))))
+   `(rpm-spec-doc-face ((,class (:foreground ,rainbow-4))))
+   `(rpm-spec-dir-face ((,class (:foreground ,rainbow-6))))
+   `(rpm-spec-package-face ((,class (:foreground ,rainbow-3))))
+   `(rpm-spec-ghost-face ((,class (:foreground ,rainbow-3))))
+   `(rpm-spec-section-face ((,class (:foreground ,rainbow-7))))))
    
 
 
