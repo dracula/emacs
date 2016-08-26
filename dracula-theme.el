@@ -6,9 +6,9 @@
 ;; http://zenorocha.mit-license.org
 
 ;; Author: film42
-;; Version: 1.2.5
+;; Version: 1.2.6
 ;; Package-Requires: ((emacs "24"))
-;; URL: https://github.com/zenorocha/dracula-theme
+;; URL: https://github.com/dracula/emacs
 
 ;;; Commentary:
 
