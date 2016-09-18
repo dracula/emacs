@@ -47,6 +47,7 @@
       (rainbow-6 "#50fa7b")
       (rainbow-7 "#f1fa8c")
       (rainbow-8 "#0189cc")
+      (rainbow-9 "#ff5555")
       (eph-verbatim "#f1fa8c")
       (eph-code "#ff79c6"))
 
