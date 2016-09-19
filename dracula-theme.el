@@ -305,7 +305,7 @@
    `(rpm-spec-macro-face ((,class (:foreground ,rainbow-7))))
    `(rpm-spec-obsolete-tag-face ((,class (:inherit font-lock-warning-face))))
    `(rpm-spec-package-face ((,class (:foreground ,rainbow-3))))
-   `(rpm-spec-section-face ((,class (:foreground ,rainbow-7)))))
+   `(rpm-spec-section-face ((,class (:foreground ,rainbow-7))))
    `(rpm-spec-tag-face ((,class (:foreground ,rainbow-2))))
    `(rpm-spec-var-face ((,class (:foreground "#a0522d"))))
    ;; slime
@@ -342,7 +342,7 @@
    `(web-mode-warning-face ((,class (:inherit ,font-lock-warning-face))))
    ;; which-func
    `(which-func ((,class (:inherit ,font-lock-function-name-face))))
-  )
+  ))
 
 
 ;;;###autoload
