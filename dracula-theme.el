@@ -17,6 +17,7 @@
 ;;; Code:
 
 (deftheme dracula)
+
 (if (display-graphic-p) (setq bg1 "#282a36") (setq bg1 "#000000"))
 (let ((class '((class color) (min-colors 89)))
       (fg1 "#f8f8f2")
