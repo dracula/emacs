@@ -344,7 +344,7 @@
    `(which-func ((,class (:inherit ,font-lock-function-name-face))))
    `(dired-directory ((,class (:foreground ,func :weight normal))))
    `(dired-flagged ((,class (:foreground ,keyword))))
-   `(dired-header ((,class (:foreground ,fg3 :background ,func))))
+   `(dired-header ((,class (:foreground ,fg3 :background ,bg1))))
    `(dired-ignored ((,class (:inherit shadow))))
    `(dired-mark ((,class (:foreground ,var :weight bold))))
    `(dired-marked ((,class (:foreground ,builtin :weight bold))))
