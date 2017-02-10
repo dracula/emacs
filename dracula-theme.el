@@ -18,12 +18,12 @@
 
 (deftheme dracula)
 
+(if (display-graphic-p) (setq bg1 "#282a36") (setq bg1 "#000000"))
 (let ((class '((class color) (min-colors 89)))
       (fg1 "#f8f8f2")
       (fg2 "#e2e2dc")
       (fg3 "#ccccc7")
       (fg4 "#b6b6b2")
-      (bg1 "#282a36")
       (bg2 "#373844")
       (bg3 "#464752")
       (bg4 "#565761")
