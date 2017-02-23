@@ -1,4 +1,4 @@
-;;; dracula-theme.el --- Dracula Theme
+;; dracula-theme.el --- Dracula Theme
 
 ;; Copyright 2016, All rights reserved
 ;;
@@ -32,7 +32,7 @@
       (key2 "#0189cc")
       (key3 "#ff79c6")
       ;; (builtin "#8be9fd")
-      (builtin "#ffb86c")
+      (builtin "#bd93f9")
       (keyword "#ff79c6")
       (const   "#bd93f9")
       (comment "#6272a4")
@@ -40,16 +40,16 @@
       (str     "#f1fa8c")
       (type    "#8be9fd")
       ;; (var     "#f8f8f2")
-      (var "#ffb86c")
+      (var "#bd93f9")
       (warning "#ffb86c")
-      (rainbow-1 "#f8f8f2")
-      (rainbow-2 "#8be9fd")
-      (rainbow-3 "#bd93f9")
-      (rainbow-4 "#ff79c6")
-      (rainbow-5 "#ffb86c")
-      (rainbow-6 "#50fa7b")
-      (rainbow-7 "#f1fa8c")
-      (rainbow-8 "#0189cc")
+      (rainbow-1 "#f8f8f2") ;; white
+      (rainbow-2 "#8be9fd") ;; cyan
+      (rainbow-3 "#bd93f9") ;; purple
+      (rainbow-4 "#ff79c6") ;; pink
+      (rainbow-5 "#ffb86c") ;; orange
+      (rainbow-6 "#50fa7b") ;; green
+      (rainbow-7 "#f1fa8c") ;; yellow
+      (rainbow-8 "#0189cc") ;; blue
       (eph-verbatim "#f1fa8c")
       (eph-code "#ff79c6"))
   
@@ -278,7 +278,7 @@
    `(web-mode-html-attr-name-face ((,class (:foreground ,func))))
    `(web-mode-html-attr-value-face ((,class (:foreground ,keyword))))
    `(web-mode-warning-face ((,class (:inherit ,font-lock-warning-face))))
-   `(web-mode-html-tag-face ((,class (:foreground ,builtin))))
+   `(web-mode-html-tag-face ((,class (:foreground ,rainbow-4))))
    `(web-mode-symbol-face ((,class (:foreground ,rainbow-3))))
    `(jde-java-font-lock-package-face ((t (:foreground ,var))))
    `(jde-java-font-lock-public-face ((t (:foreground ,keyword))))
@@ -291,6 +291,8 @@
    `(enh-ruby-string-delimiter-face ((,class (:foreground ,str))))
    `(enh-ruby-regexp-delimiter-face ((,class (:foreground ,str))))
    `(which-func ((,class (:inherit ,font-lock-function-name-face))))
+   `(fountain-dialog ((, class (:foreground ,rainbow-6))))
+   `(fountain-trans ((, class (:foreground ,rainbow-3))))
    `(powerline-evil-base-face ((t (:foreground ,bg2))))
    `(powerline-evil-normal-face ((,class (:inherit powerline-evil-base-face :background ,rainbow-6))))
    `(powerline-evil-insert-face ((,class (:inherit powerline-evil-base-face :background ,rainbow-2))))
