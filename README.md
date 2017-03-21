@@ -13,7 +13,7 @@ All instructions can be found at [draculatheme.com/emacs](https://draculatheme.c
 This theme is maintained by the following person(s) and a bunch of [awesome contributors](https://github.com/dracula/emacs/graphs/contributors).
 
 [![Garrett T](https://avatars3.githubusercontent.com/u/1043908?v=3&s=70)](https://github.com/film42) |
---- | ---
+--- |
 [Garrett T](https://github.com/film42) |
 
 ## License
