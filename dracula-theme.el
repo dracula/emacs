@@ -1,4 +1,4 @@
-;;; dracula-theme.el --- Dracula Theme
+;; dracula-theme.el --- Dracula Theme
 
 ;; Copyright 2015-present, All rights reserved
 ;;
@@ -17,12 +17,13 @@
 
 (deftheme dracula)
 
+(if (display-graphic-p) (setq bg1 "#282a36") (setq bg1 nil))
+
 (let ((class '((class color) (min-colors 89)))
       (fg1 "#f8f8f2")
       (fg2 "#e2e2dc")
       (fg3 "#ccccc7")
       (fg4 "#b6b6b2")
-      (bg1 "#282a36")
       (bg2 "#373844")
       (bg3 "#464752")
       (bg4 "#565761")
@@ -49,7 +50,7 @@
       (rainbow-9 "#ff5555")
       (eph-verbatim "#f1fa8c")
       (eph-code "#ff79c6"))
-
+  
   (custom-theme-set-faces
    'dracula
    ;; default
@@ -150,6 +151,25 @@
    `(gnus-summary-normal-ticked ((,class (:foreground ,keyword :weight light))))
    `(gnus-summary-normal-unread ((,class (:foreground ,comment :weight normal))))
    `(gnus-summary-selected ((,class (:inverse-video t))))
+<<<<<<< HEAD
+   `(gnus-summary-markup-face ((,class (:foreground ,const))))
+   `(gnus-summary-normal-ancient ((,class (:inherit gnus-summary-normal-read))))
+   `(spam ((,class (:inherit gnus-summary-normal-read :foreground ,warning :strike-through t :slant oblique))))
+   `(mu4e-view-url-number-face ((,class (:foreground ,type))))
+   `(mu4e-cited-1-face ((,class (:foreground ,fg2))))
+   `(mu4e-cited-7-face ((,class (:foreground ,fg3))))
+   `(mu4e-header-marks-face ((,class (:foreground ,type))))
+   `(mu4e-title-face ((,class (:foreground ,rainbow-6))))
+   `(mu4e-header-key-face ((,class (:foreground ,rainbow-3))))
+   `(mu4e-highlight-face ((,class (:foreground ,rainbow-4))))
+   `(mu4e-flagged-face ((,class (:foreground ,rainbow-5))))
+   `(mu4e-unread-face ((,class (:foreground ,rainbow-4))))
+   `(mu4e-link-face ((,class (:foreground ,rainbow-2))))
+   `(ffap ((,class (:foreground ,fg4))))
+   `(js2-private-function-call ((,class (:foreground ,const))))
+   `(js2-jsdoc-html-tag-delimiter ((,class (:foreground ,str))))
+   `(js2-jsdoc-html-tag-name ((,class (:foreground ,key2))))
+=======
    ;; helm
    `(helm-bookmark-w3m ((,class (:foreground ,type))))
    `(helm-buffer-not-saved ((,class (:foreground ,type :background ,bg1))))
@@ -196,6 +216,7 @@
    `(jde-java-font-lock-private-face ((t (:foreground ,keyword))))
    `(jde-java-font-lock-public-face ((t (:foreground ,keyword))))
    ;; js2-mode
+>>>>>>> 0b865af179768c24a1f7135c2866eca0f65b9295
    `(js2-external-variable ((,class (:foreground ,type  ))))
    `(js2-function-param ((,class (:foreground ,const))))
    `(js2-jsdoc-html-tag-delimiter ((,class (:foreground ,str))))
@@ -340,6 +361,31 @@
    `(web-mode-string-face ((,class (:foreground ,str))))
    `(web-mode-type-face ((,class (:inherit ,font-lock-type-face))))
    `(web-mode-warning-face ((,class (:inherit ,font-lock-warning-face))))
+<<<<<<< HEAD
+   `(web-mode-html-tag-face ((,class (:foreground ,rainbow-4))))
+   `(web-mode-symbol-face ((,class (:foreground ,rainbow-3))))
+   `(jde-java-font-lock-package-face ((t (:foreground ,var))))
+   `(jde-java-font-lock-public-face ((t (:foreground ,keyword))))
+   `(jde-java-font-lock-private-face ((t (:foreground ,keyword))))
+   `(jde-java-font-lock-constant-face ((t (:foreground ,const))))
+   `(jde-java-font-lock-modifier-face ((t (:foreground ,key3))))
+   `(jde-java-font-lock-number-face ((t (:foreground ,var))))
+   `(enh-ruby-op-face ((,class (:foreground ,keyword))))
+   `(enh-ruby-heredoc-delimiter-face ((,class (:foreground ,str))))
+   `(enh-ruby-string-delimiter-face ((,class (:foreground ,str))))
+   `(enh-ruby-regexp-delimiter-face ((,class (:foreground ,str))))
+   `(which-func ((,class (:inherit ,font-lock-function-name-face))))
+   `(fountain-dialog ((, class (:foreground ,rainbow-6))))
+   `(fountain-trans ((, class (:foreground ,rainbow-3))))
+   `(powerline-evil-base-face ((t (:foreground ,bg2))))
+   `(powerline-evil-normal-face ((,class (:inherit powerline-evil-base-face :background ,rainbow-6))))
+   `(powerline-evil-insert-face ((,class (:inherit powerline-evil-base-face :background ,rainbow-2))))
+   `(powerline-evil-visual-face ((,class (:inherit powerline-evil-base-face :background ,rainbow-5))))
+   `(powerline-evil-operator-face ((,class (:inherit powerline-evil-base-face :background ,rainbow-4))))
+   `(powerline-evil-replace-face ((,class (:inherit powerline-evil-base-face :background "#ff5555"))))
+   `(powerline-evil-motion-face ((,class (:inherit powerline-evil-base-face :background ,rainbow-3))))
+   `(powerline-evil-emacs-face ((,class (:inherit powerline-evil-base-face :background ,rainbow-7))))))
+=======
    ;; which-func
    `(which-func ((,class (:inherit ,font-lock-function-name-face))))
    `(dired-directory ((,class (:foreground ,func :weight normal))))
@@ -416,6 +462,7 @@
    `(icicle-annotation                         ((,class (:foreground ,fg4))))
   ))
 
+>>>>>>> 0b865af179768c24a1f7135c2866eca0f65b9295
 
 ;;;###autoload
 (when load-file-name
@@ -425,7 +472,7 @@
 (provide-theme 'dracula)
 
 ;; Local Variables:
-;; no-byte-compile: t
+;; no-byte-compile:
 ;; End:
 
 ;;; dracula-theme.el ends here
