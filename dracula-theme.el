@@ -75,15 +75,24 @@
    `(whitespace-trailing ((,class :inherit trailing-whitespace)))
    ;; syntax
    `(font-lock-builtin-face ((,class (:foreground ,builtin))))
+   `(font-lock-comment-delimiter-face ((,class (:foreground ,comment))))
    `(font-lock-comment-face ((,class (:foreground ,comment))))
    `(font-lock-constant-face ((,class (:foreground ,const))))
    `(font-lock-doc-face ((,class (:foreground ,comment))))
    `(font-lock-function-name-face ((,class (:foreground ,func :bold t))))
    `(font-lock-keyword-face ((,class (:bold ,class :foreground ,keyword))))
    `(font-lock-negation-char-face ((,class (:foreground ,const))))
+   `(font-lock-number-face ((,class (:foreground ,str))))
+   `(font-lock-operator-face ((,class (:foreground , keyword))))
+   ;; Haskell Mode uses variable face by default so why have to override this directly
+   `(haskell-operator-face ((,class (:foreground , keyword))))
+   `(font-lock-preprocessor-face ((,class (:foreground , builtin))))
    `(font-lock-reference-face ((,class (:foreground ,const))))
+   `(font-lock-regexp-grouping-backslash ((,class (:foreground ,rainbow-2))))
+   `(font-lock-regexp-grouping-construct ((,class (:foreground ,rainbow-3))))
    `(font-lock-string-face ((,class (:foreground ,str))))
-   `(font-lock-type-face ((,class (:foreground ,type ))))
+   ;; make type cyan as in the last vs.code theme
+   `(font-lock-type-face ((,class (:foreground , "#00ffff"))))
    `(font-lock-variable-name-face ((,class (:foreground ,var))))
    `(font-lock-warning-face ((,class (:foreground ,warning :background ,bg2))))
    ;; auto-complete
