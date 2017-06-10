@@ -85,7 +85,8 @@
    `(font-lock-number-face ((,class (:foreground ,str))))
    `(font-lock-operator-face ((,class (:foreground , keyword))))
    ;; Haskell Mode uses variable face by default so why have to override this directly
-   `(haskell-operator-face ((,class (:foreground , keyword))))
+   `(haskell-operator-face ((,class (:foreground , rainbow-4))))
+   `(haskell-constructor-face ((,class (:foreground , rainbow-3))))
    `(font-lock-preprocessor-face ((,class (:foreground , builtin))))
    `(font-lock-reference-face ((,class (:foreground ,const))))
    `(font-lock-regexp-grouping-backslash ((,class (:foreground ,rainbow-2))))
