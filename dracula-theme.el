@@ -48,7 +48,8 @@
       (rainbow-8 "#0189cc")
       (rainbow-9 "#ff5555")
       (eph-verbatim "#f1fa8c")
-      (eph-code "#ff79c6"))
+      (eph-code "#ff79c6")
+      (type-name "00ffff"))
 
   (custom-theme-set-faces
    'dracula
@@ -90,7 +91,7 @@
    `(font-lock-regexp-grouping-construct ((,class (:foreground ,rainbow-3))))
    `(font-lock-string-face ((,class (:foreground ,str))))
    ;; make type cyan as in the last vs.code theme
-   `(font-lock-type-face ((,class (:foreground , "#00ffff"))))
+   `(font-lock-type-face ((,class (:foreground , type-name))))
    `(font-lock-variable-name-face ((,class (:foreground ,var))))
    `(font-lock-warning-face ((,class (:foreground ,warning :background ,bg2))))
    ;; auto-complete
