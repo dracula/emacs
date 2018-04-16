@@ -27,6 +27,7 @@
       (bg3 "#464752")
       (bg4 "#565761")
       (bg5 "#44475a")
+      (bg6 "#b45bcf")
       (key2 "#0189cc")
       (key3 "#ff79c6")
       (builtin "#ffb86c")
@@ -73,6 +74,7 @@
    `(vertical-border ((,class (:foreground ,bg2))))
    `(warning ((,class (:foreground ,warning))))
    `(whitespace-trailing ((,class :inherit trailing-whitespace)))
+   `(header-line ((,class :background ,bg1)))
    ;; syntax
    `(font-lock-builtin-face ((,class (:foreground ,builtin))))
    `(font-lock-comment-face ((,class (:foreground ,comment))))
@@ -288,6 +290,10 @@
    `(powerline-evil-operator-face ((,class (:inherit powerline-evil-base-face :background ,rainbow-4))))
    `(powerline-evil-replace-face ((,class (:inherit powerline-evil-base-face :background "#ff5555"))))
    `(powerline-evil-visual-face ((,class (:inherit powerline-evil-base-face :background ,rainbow-5))))
+   `(powerline-active1 ((,class (:background ,bg6 :foreground ,fg1))))
+   `(powerline-active2 ((,class (:background ,bg6 :foreground ,fg1))))
+   `(powerline-inactive1 ((,class (:background ,bg3 :foreground ,fg1))))
+   `(powerline-inactive2 ((,class (:background ,bg3 :foreground ,fg1))))
    ;; rainbow-delimiters
    `(rainbow-delimiters-depth-1-face ((,class :foreground ,rainbow-1)))
    `(rainbow-delimiters-depth-2-face ((,class :foreground ,rainbow-2)))
