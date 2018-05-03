@@ -224,8 +224,8 @@
                (magit-section-heading :foreground ,keyword :weight bold)
                (magit-section-highlight :background ,bg2)
                ;; mode-line
-               (mode-line :foreground nil :background ,bg3 :box ,bg3)
-               (mode-line-inactive :foreground ,fg1 :background ,bg1 :box ,bg1)
+               (mode-line :foreground nil :background ,bg5 :box ,bg5)
+               (mode-line-inactive :foreground ,fg1 :background ,bg2 :box ,bg2)
                ;; mu4e
                (mu4e-cited-1-face :foreground ,fg2)
                (mu4e-cited-7-face :foreground ,fg3)
