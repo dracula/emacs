@@ -47,6 +47,7 @@
                 (rainbow-7    "#f1fa8c")
                 (rainbow-8    "#0189cc")
                 (rainbow-9    "#ff5555")
+                (rainbow-10   "#a0522d")
                 (eph-verbatim "#f1fa8c")
                 (eph-code     "#ff79c6")))
       (faces '(;; default
@@ -283,7 +284,7 @@
                (powerline-evil-motion-face :inherit powerline-evil-base-face :background ,rainbow-3)
                (powerline-evil-normal-face :inherit powerline-evil-base-face :background ,rainbow-6)
                (powerline-evil-operator-face :inherit powerline-evil-base-face :background ,rainbow-4)
-               (powerline-evil-replace-face :inherit powerline-evil-base-face :background "#ff5555")
+               (powerline-evil-replace-face :inherit powerline-evil-base-face :background ,rainbow-9)
                (powerline-evil-visual-face :inherit powerline-evil-base-face :background ,rainbow-5)
                (powerline-active1 :background ,bg6 :foreground ,fg1)
                (powerline-active2 :background ,bg6 :foreground ,fg1)
@@ -308,7 +309,7 @@
                (rpm-spec-package-face :foreground ,rainbow-3)
                (rpm-spec-section-face :foreground ,rainbow-7)
                (rpm-spec-tag-face :foreground ,rainbow-2)
-               (rpm-spec-var-face :foreground "#a0522d")
+               (rpm-spec-var-face :foreground ,rainbow-10)
                ;; slime
                (slime-repl-inputed-output-face :foreground ,type)
                ;; spam
