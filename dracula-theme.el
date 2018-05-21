@@ -317,13 +317,13 @@
                ;; term
                (term :foreground ,fg1 :background ,bg1)
                (term-color-black :foreground ,bg3 :background ,bg3)
-               (term-color-blue :foreground ,func :background ,func)
-               (term-color-cyan :foreground ,str :background ,str)
-               (term-color-green :foreground ,type :background ,bg3)
+               (term-color-blue :foreground ,type :background ,func)
+               (term-color-cyan :foreground ,const :background ,const)
+               (term-color-green :foreground ,func :background ,bg3)
                (term-color-magenta :foreground ,builtin :background ,builtin)
                (term-color-red :foreground ,keyword :background ,bg3)
                (term-color-white :foreground ,fg2 :background ,fg2)
-               (term-color-yellow :foreground ,var :background ,var)
+               (term-color-yellow :foreground ,str :background ,var)
                ;; undo-tree
                (undo-tree-visualizer-current-face :foreground ,builtin)
                (undo-tree-visualizer-default-face :foreground ,fg2)
