@@ -428,10 +428,10 @@
                                                    (eval `(backquote ,spec)))))
              (cl-loop for (face . spec) in faces
                       collect `(,face
-                                ((((type tty))
-                                  ,(expand-for-tty spec))
-                                 (((type graphic))
-                                  ,(expand-for-graphic spec)))))))))
+                                ((((min-colors 16777216))
+                                  ,(expand-for-graphic spec))
+                                 (t
+                                  ,(expand-for-tty spec)))))))))
 
 ;;;###autoload
 (when load-file-name
