@@ -14,7 +14,7 @@
 ;; A dark color theme available for a number of editors.
 
 ;;; Code:
-
+(require 'cl-lib)
 (deftheme dracula)
 
 (let ((colors '((fg1          "#f8f8f2")      ; Assigment form: VARIABLE COLOR [TTY-COLOR]
