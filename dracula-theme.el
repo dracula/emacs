@@ -177,6 +177,8 @@
                (helm-time-zone-current :foreground ,builtin :background ,bg1)
                (helm-time-zone-home :foreground ,type :background ,bg1)
                (helm-visible-mark :foreground ,bg1 :background ,bg3)
+               ;; highlight-indentation minor mode
+               (highlight-indentation-face :background ,bg2)
                ;; icomplete
                (icompletep-determined :foreground ,builtin)
                ;; ido
