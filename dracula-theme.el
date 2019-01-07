@@ -5,7 +5,7 @@
 ;; Code licensed under the MIT license
 
 ;; Author: film42
-;; Version: 1.5.0
+;; Version: 1.5.1
 ;; Package-Requires: ((emacs "24"))
 ;; URL: https://github.com/dracula/emacs
 
