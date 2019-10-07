@@ -63,6 +63,7 @@
                (lazy-highlight :foreground ,fg2 :background ,bg3)
                (link :foreground ,const :underline t)
                (linum :slant italic :foreground ,bg4 :background ,bg1)
+               (line-number :slant italic :foreground ,bg4 :background ,bg1)
                (minibuffer-prompt :bold t :foreground ,keyword)
                (region :background ,str :foreground ,bg1)
                (show-paren-match-face :background ,warning)
