@@ -37,6 +37,7 @@
                 (fg2             "#e2e2dc")
                 (fg3             "#ccccc7")
                 (fg4             "#b6b6b2")
+                (other-violet    "#b45bcf")
                 (other-blue      "#0189cc")))
       (faces '(;; default
                (cursor :background ,fg3)
@@ -417,7 +418,18 @@
                (icicle-complete-input :foreground ,dracula-orange)
                (icicle-common-match-highlight-Completions :foreground ,dracula-purple)
                (icicle-candidate-part :foreground ,dracula-fg)
-               (icicle-annotation :foreground ,fg4))))
+               (icicle-annotation :foreground ,fg4)
+               ;; Tab-Bar & Tab-Line (since Emacs 27)
+               (tab-bar :foreground ,dracula-pink :background ,bg2
+                        :inherit variable-pitch)
+               (tab-bar-tab :background ,dracula-current :inherit tab-bar)
+               (tab-bar-tab-inactive :foreground ,other-violet :background ,bg3
+                                     :inherit tab-bar-tab)
+               (tab-line :height 0.9 :foreground ,dracula-pink
+                         :background ,bg2 :inherit variable-pitch)
+               (tab-line-tab :background ,dracula-current :inherit tab-line)
+               (tab-line-tab-inactive :foreground ,other-violet :background ,bg3
+                                      :inherit tab-line-tab))))
 
   (apply #'custom-theme-set-faces
          'dracula
@@ -444,6 +456,7 @@
 
 ;; Local Variables:
 ;; no-byte-compile: t
+;; indent-tabs-mode: nil
 ;; End:
 
 ;;; dracula-theme.el ends here
