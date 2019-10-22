@@ -146,6 +146,9 @@
                (gnus-summary-low-ancient :inherit gnus-summary-low-read)
                (gnus-summary-low-ticked :inherit gnus-summary-low-read :underline t)
                (gnus-summary-selected :inverse-video t)
+               ;; haskell-mode
+               (haskell-operator-face :foreground ,dracula-pink)
+               (haskell-constructor-face :foreground ,dracula-purple)
                ;; helm
                (helm-bookmark-w3m :foreground ,dracula-purple)
                (helm-buffer-not-saved :foreground ,dracula-purple :background ,dracula-bg)
