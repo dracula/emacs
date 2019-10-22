@@ -37,7 +37,6 @@
                 (fg2             "#e2e2dc")
                 (fg3             "#ccccc7")
                 (fg4             "#b6b6b2")
-                (other-violet    "#b45bcf")
                 (other-blue      "#0189cc")))
       (faces '(;; default
                (cursor :background ,fg3)
@@ -293,10 +292,6 @@
                (powerline-evil-operator-face :inherit powerline-evil-base-face :background ,dracula-pink)
                (powerline-evil-replace-face :inherit powerline-evil-base-face :background ,dracula-red)
                (powerline-evil-visual-face :inherit powerline-evil-base-face :background ,dracula-orange)
-               (powerline-active1 :background ,other-violet :foreground ,dracula-fg)
-               (powerline-active2 :background ,other-violet :foreground ,dracula-fg)
-               (powerline-inactive2 :background ,bg3 :foreground ,dracula-fg)
-               (powerline-inactive2 :background ,bg3 :foreground ,dracula-fg)
                ;; rainbow-delimiters
                (rainbow-delimiters-depth-1-face :foreground ,dracula-fg)
                (rainbow-delimiters-depth-2-face :foreground ,dracula-cyan)
