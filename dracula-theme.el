@@ -71,7 +71,7 @@
                (font-lock-negation-char-face :foreground ,dracula-cyan)
                (font-lock-reference-face :foreground ,dracula-cyan)
                (font-lock-string-face :foreground ,dracula-yellow)
-               (font-lock-type-face :foreground ,dracula-purple )
+               (font-lock-type-face :foreground ,dracula-purple)
                (font-lock-variable-name-face :foreground ,dracula-fg)
                (font-lock-warning-face :foreground ,dracula-orange :background ,bg2)
                ;; auto-complete
@@ -194,7 +194,7 @@
                (jde-java-font-lock-private-face :foreground ,dracula-pink)
                (jde-java-font-lock-public-face :foreground ,dracula-pink)
                ;; js2-mode
-               (js2-external-variable :foreground ,dracula-purple  )
+               (js2-external-variable :foreground ,dracula-purple)
                (js2-function-param :foreground ,dracula-cyan)
                (js2-jsdoc-html-tag-delimiter :foreground ,dracula-yellow)
                (js2-jsdoc-html-tag-name :foreground ,other-blue)
