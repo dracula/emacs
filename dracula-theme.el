@@ -189,6 +189,9 @@
                (ido-first-match :foreground ,dracula-pink :bold t)
                (ido-only-match :foreground ,dracula-orange)
                (ido-subdir :foreground ,dracula-orange)
+               (ido-virtual :foreground ,dracula-cyan)
+               (ido-incomplete-regexp :inherit font-lock-warning-face)
+               (ido-indicator :foreground ,dracula-fg :background ,dracula-pink)
                ;; isearch
                (isearch :bold t :foreground ,dracula-orange :background ,bg3)
                (isearch-fail :foreground ,dracula-bg :background ,dracula-orange)
