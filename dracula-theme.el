@@ -346,6 +346,7 @@
                (web-mode-warning-face :inherit ,font-lock-warning-face)
                ;; which-func
                (which-func :inherit ,font-lock-function-name-face)
+               ;; dired
                (dired-directory :foreground ,dracula-green :weight normal)
                (dired-flagged :foreground ,dracula-pink)
                (dired-header :foreground ,fg3 :background ,dracula-bg)
@@ -382,6 +383,7 @@
                (diredp-link-priv :foreground ,dracula-orange)
                (diredp-autofile-name :foreground ,dracula-yellow)
                (diredp-tagged-autofile-name :foreground ,dracula-yellow)
+               ;; icicle
                (icicle-whitespace-highlight :background ,dracula-fg)
                (icicle-special-candidate :foreground ,fg2)
                (icicle-extra-candidate :foreground ,fg2)
