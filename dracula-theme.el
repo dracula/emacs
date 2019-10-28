@@ -443,6 +443,17 @@
                ;; spam
                (spam :inherit gnus-summary-normal-read :foreground ,dracula-orange
                      :strike-through t :slant oblique)
+               ;; tab-bar & tab-line (since Emacs 27.1)
+               (tab-bar :foreground ,dracula-pink :background ,bg2
+                        :inherit variable-pitch)
+               (tab-bar-tab :background ,dracula-current :inherit tab-bar)
+               (tab-bar-tab-inactive :foreground ,dracula-purple :background ,bg3
+                                     :inherit tab-bar-tab)
+               (tab-line :height 0.9 :foreground ,dracula-pink
+                         :background ,bg2 :inherit variable-pitch)
+               (tab-line-tab :background ,dracula-current :inherit tab-line)
+               (tab-line-tab-inactive :foreground ,dracula-purple :background ,bg3
+                                      :inherit tab-line-tab)
                ;; term
                (term :foreground ,dracula-fg :background ,dracula-bg)
                (term-color-black :foreground ,bg3 :background ,bg3)
