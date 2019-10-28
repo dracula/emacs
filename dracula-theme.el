@@ -54,7 +54,6 @@
                (line-number :slant italic :foreground ,bg4 :background ,dracula-bg)
                (minibuffer-prompt :bold t :foreground ,dracula-pink)
                (region :background ,dracula-yellow :foreground ,dracula-bg :extend t)
-               (show-paren-match-face :background ,dracula-orange)
                (trailing-whitespace :foreground nil :background ,dracula-orange)
                (whitespace-trailing :inherit trailing-whitespace)
                (vertical-border :foreground ,bg2)
@@ -77,6 +76,11 @@
                (font-lock-type-face :foreground ,dracula-purple)
                (font-lock-variable-name-face :foreground ,dracula-fg)
                (font-lock-warning-face :foreground ,dracula-orange :background ,bg2)
+               ;; show-paren
+               (show-paren-match-face :inherit font-lock-warning-face)
+               (show-paren-match :inherit font-lock-warning-face)
+               (show-paren-match-expression :inherit region)
+               (show-paren-mismatch :background ,bg2 :foreground ,dracula-red)
                ;; auto-complete
                (ac-completion-face :underline t :foreground ,dracula-pink)
                ;; company
