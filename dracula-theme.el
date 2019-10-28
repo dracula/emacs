@@ -444,6 +444,7 @@
 
 ;; Local Variables:
 ;; no-byte-compile: t
+;; indent-tabs-mode: nil
 ;; End:
 
 ;;; dracula-theme.el ends here
