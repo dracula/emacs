@@ -56,9 +56,9 @@
                (region :background ,dracula-yellow :foreground ,dracula-bg :extend t)
                (show-paren-match-face :background ,dracula-orange)
                (trailing-whitespace :foreground nil :background ,dracula-orange)
+               (whitespace-trailing :inherit trailing-whitespace)
                (vertical-border :foreground ,bg2)
                (warning :foreground ,dracula-orange)
-               (whitespace-trailing :inherit trailing-whitespace)
                (header-line :background ,dracula-bg)
                ;; syntax
                (font-lock-builtin-face :foreground ,dracula-orange)
