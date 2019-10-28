@@ -232,14 +232,27 @@
                (magit-process-ok :foreground ,dracula-green :weight bold)
                (magit-section-heading :foreground ,dracula-pink :weight bold)
                (magit-section-highlight :background ,bg2)
+               ;; message
+               (message-mml :foreground ,dracula-green :weight normal)
+               (message-header-xheader :foreground ,dracula-cyan :weight normal)
                ;; mode-line
                (mode-line :foreground nil :background ,dracula-current :box ,dracula-current)
                (mode-line-inactive :foreground ,dracula-fg :background ,bg2 :box ,bg2)
                ;; mu4e
-               (mu4e-cited-1-face :foreground ,fg2)
-               (mu4e-cited-7-face :foreground ,fg3)
-               (mu4e-header-marks-face :foreground ,dracula-purple)
+               (mu4e-unread-face :foreground ,dracula-pink :weight normal)
                (mu4e-view-url-number-face :foreground ,dracula-purple)
+               (mu4e-highlight-face :background ,dracula-bg
+                                    :foreground ,dracula-yellow)
+               (mu4e-header-highlight-face :background ,dracula-current
+                                           :foreground ,dracula-fg
+                                           :underline nil :weight bold)
+               (mu4e-header-key-face :inherit message-mml)
+               (mu4e-header-marks-face :foreground ,dracula-purple)
+               (mu4e-cited-1-face :foreground ,dracula-purple)
+               (mu4e-cited-2-face :foreground ,dracula-orange)
+               (mu4e-cited-3-face :foreground ,dracula-comment)
+               (mu4e-cited-4-face :foreground ,fg2)
+               (mu4e-cited-5-face :foreground ,fg3)
                ;; org
                (org-agenda-date :foreground ,dracula-cyan :underline nil)
                (org-agenda-dimmed-todo-face :foreground ,dracula-comment)
