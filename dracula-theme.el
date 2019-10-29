@@ -55,7 +55,6 @@
                (minibuffer-prompt :weight bold :foreground ,dracula-pink)
                (region :background ,dracula-yellow :foreground ,dracula-bg :extend t)
                (trailing-whitespace :foreground nil :background ,dracula-orange)
-               (whitespace-trailing :inherit trailing-whitespace)
                (vertical-border :foreground ,bg2)
                (warning :foreground ,dracula-orange)
                (header-line :background ,dracula-bg)
@@ -446,6 +445,18 @@
                (web-mode-warning-face :inherit ,font-lock-warning-face)
                ;; which-func
                (which-func :inherit ,font-lock-function-name-face)
+               ;; whitespace
+               (whitespace-big-indent :background ,dracula-red :foreground ,dracula-red)
+               (whitespace-empty :background ,dracula-orange :foreground ,dracula-red)
+               (whitespace-hspace :background ,bg3 :foreground ,dracula-comment)
+               (whitespace-indentation :background ,dracula-orange :foreground ,dracula-red)
+               (whitespace-line :background ,dracula-bg :foreground ,dracula-pink)
+               (whitespace-newline :foreground ,dracula-comment)
+               (whitespace-space :background ,dracula-bg :foreground ,dracula-comment)
+               (whitespace-space-after-tab :background ,dracula-orange :foreground ,dracula-red)
+               (whitespace-space-before-tab :background ,dracula-orange :foreground ,dracula-red)
+               (whitespace-tab :background ,bg2 :foreground ,dracula-comment)
+               (whitespace-trailing :inherit trailing-whitespace)
                ;; yard-mode
                (yard-tag-face :inherit ,font-lock-builtin-face)
                (yard-directive-face :inherit ,font-lock-builtin-face))))
