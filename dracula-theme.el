@@ -441,7 +441,10 @@
                (web-mode-type-face :inherit ,font-lock-type-face)
                (web-mode-warning-face :inherit ,font-lock-warning-face)
                ;; which-func
-               (which-func :inherit ,font-lock-function-name-face))))
+               (which-func :inherit ,font-lock-function-name-face)
+               ;; yard-mode
+               (yard-tag-face :inherit ,font-lock-builtin-face)
+               (yard-directive-face :inherit ,font-lock-builtin-face))))
 
   (apply #'custom-theme-set-faces
          'dracula
