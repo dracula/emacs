@@ -403,10 +403,14 @@
                (rpm-spec-tag-face :foreground ,dracula-cyan)
                (rpm-spec-var-face :foreground ,dracula-orange)
                ;; show-paren
-               (show-paren-match-face :inherit font-lock-warning-face)
-               (show-paren-match :inherit font-lock-warning-face)
+               (show-paren-match-face :background unspecified
+                                      :foreground ,dracula-cyan
+                                      :weight bold)
+               (show-paren-match :background unspecified
+                                 :foreground ,dracula-cyan
+                                 :weight bold)
                (show-paren-match-expression :inherit region)
-               (show-paren-mismatch :background ,bg2 :foreground ,dracula-red)
+               (show-paren-mismatch :inherit font-lock-warning-face)
                ;; slime
                (slime-repl-inputed-output-face :foreground ,dracula-purple)
                ;; spam
