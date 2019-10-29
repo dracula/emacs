@@ -74,7 +74,8 @@
                (font-lock-regexp-grouping-construct :foreground ,dracula-purple)
                (font-lock-string-face :foreground ,dracula-yellow)
                (font-lock-type-face :foreground ,dracula-purple)
-               (font-lock-variable-name-face :foreground ,dracula-fg)
+               (font-lock-variable-name-face :foreground ,dracula-fg
+                                             :weight bold)
                (font-lock-warning-face :foreground ,dracula-orange :background ,bg2)
                ;; auto-complete
                (ac-completion-face :underline t :foreground ,dracula-pink)
