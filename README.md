@@ -2,7 +2,7 @@
 
 > A dark theme for [Emacs](https://www.gnu.org/software/emacs/).
 
-![Screenshot](https://draculatheme.com/assets/img/screenshots/emacs.png)
+![Screenshot](./screenshot.png)
 
 ## Install
 
