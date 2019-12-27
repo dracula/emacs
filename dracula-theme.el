@@ -293,7 +293,12 @@
                ;; magit
                (magit-branch :foreground ,dracula-cyan :weight bold)
                (magit-diff-context-highlight :background ,bg3 :foreground ,fg3)
-               (magit-diff-file-header :foreground ,fg2 :background ,bg3)
+               (magit-diff-revision-summary :foreground ,dracula-orange
+                                            :background ,dracula-bg
+                                            :weight bold)
+               (magit-diff-revision-summary-highlight :foreground ,dracula-orange
+                                                      :background ,bg3
+                                                      :weight bold)
                (magit-diffstat-added :foreground ,dracula-purple)
                (magit-diffstat-removed :foreground ,dracula-fg)
                (magit-hash :foreground ,fg2)
@@ -304,7 +309,7 @@
                (magit-process-ng :foreground ,dracula-orange :weight bold)
                (magit-process-ok :foreground ,dracula-green :weight bold)
                (magit-section-heading :foreground ,dracula-pink :weight bold)
-               (magit-section-highlight :background ,bg2)
+               (magit-section-highlight :background ,bg3)
                ;; message
                (message-mml :foreground ,dracula-green :weight normal)
                (message-header-xheader :foreground ,dracula-cyan :weight normal)
