@@ -291,7 +291,11 @@
                (js3-jsdoc-tag-face :foreground ,dracula-pink)
                (js3-warning-face :underline ,dracula-pink)
                ;; magit
-               (magit-branch :foreground ,dracula-cyan :weight bold)
+               (magit-branch-local :foreground ,dracula-cyan)
+               (magit-branch-remote :foreground ,dracula-green)
+               (magit-tag :foreground ,dracula-orange)
+               (magit-section-heading :foreground ,dracula-pink :weight bold)
+               (magit-section-highlight :background ,bg3 :extend t)
                (magit-diff-context-highlight :background ,bg3
                                              :foreground ,fg3
                                              :extend t)
@@ -302,8 +306,24 @@
                                                       :background ,bg3
                                                       :weight bold
                                                       :extend t)
-               (magit-diffstat-added :foreground ,dracula-purple)
-               (magit-diffstat-removed :foreground ,dracula-fg)
+               ;; the four following lines are just a patch of the
+               ;; upstream color to add the extend keyword.
+               (magit-diff-added :background "#335533"
+                                 :foreground "#ddffdd"
+                                 :extend t)
+               (magit-diff-added-highlight :background "#336633"
+                                           :foreground "#cceecc"
+                                           :extend t)
+               (magit-diff-removed :background "#553333"
+                                   :foreground "#ffdddd"
+                                   :extend t)
+               (magit-diff-removed-highlight :background "#663333"
+                                             :foreground "#eecccc"
+                                             :extend t)
+               (magit-diff-file-heading :foreground ,dracula-fg)
+               (magit-diff-file-heading-highlight :inherit magit-section-highlight)
+               (magit-diffstat-added :foreground ,dracula-green)
+               (magit-diffstat-removed :foreground ,dracula-red)
                (magit-hash :foreground ,fg2)
                (magit-hunk-heading :background ,bg3)
                (magit-hunk-heading-highlight :background ,bg3)
@@ -311,8 +331,6 @@
                (magit-log-author :foreground ,fg3)
                (magit-process-ng :foreground ,dracula-orange :weight bold)
                (magit-process-ok :foreground ,dracula-green :weight bold)
-               (magit-section-heading :foreground ,dracula-pink :weight bold)
-               (magit-section-highlight :background ,bg3 :extend t)
                ;; message
                (message-mml :foreground ,dracula-green :weight normal)
                (message-header-xheader :foreground ,dracula-cyan :weight normal)
