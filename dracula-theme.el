@@ -291,16 +291,39 @@
                (js3-jsdoc-tag-face :foreground ,dracula-pink)
                (js3-warning-face :underline ,dracula-pink)
                ;; magit
-               (magit-branch :foreground ,dracula-cyan :weight bold)
-               (magit-diff-context-highlight :background ,bg3 :foreground ,fg3)
+               (magit-branch-local :foreground ,dracula-cyan)
+               (magit-branch-remote :foreground ,dracula-green)
+               (magit-tag :foreground ,dracula-orange)
+               (magit-section-heading :foreground ,dracula-pink :weight bold)
+               (magit-section-highlight :background ,bg3 :extend t)
+               (magit-diff-context-highlight :background ,bg3
+                                             :foreground ,fg3
+                                             :extend t)
                (magit-diff-revision-summary :foreground ,dracula-orange
                                             :background ,dracula-bg
                                             :weight bold)
                (magit-diff-revision-summary-highlight :foreground ,dracula-orange
                                                       :background ,bg3
-                                                      :weight bold)
-               (magit-diffstat-added :foreground ,dracula-purple)
-               (magit-diffstat-removed :foreground ,dracula-fg)
+                                                      :weight bold
+                                                      :extend t)
+               ;; the four following lines are just a patch of the
+               ;; upstream color to add the extend keyword.
+               (magit-diff-added :background "#335533"
+                                 :foreground "#ddffdd"
+                                 :extend t)
+               (magit-diff-added-highlight :background "#336633"
+                                           :foreground "#cceecc"
+                                           :extend t)
+               (magit-diff-removed :background "#553333"
+                                   :foreground "#ffdddd"
+                                   :extend t)
+               (magit-diff-removed-highlight :background "#663333"
+                                             :foreground "#eecccc"
+                                             :extend t)
+               (magit-diff-file-heading :foreground ,dracula-fg)
+               (magit-diff-file-heading-highlight :inherit magit-section-highlight)
+               (magit-diffstat-added :foreground ,dracula-green)
+               (magit-diffstat-removed :foreground ,dracula-red)
                (magit-hash :foreground ,fg2)
                (magit-hunk-heading :background ,bg3)
                (magit-hunk-heading-highlight :background ,bg3)
@@ -308,8 +331,6 @@
                (magit-log-author :foreground ,fg3)
                (magit-process-ng :foreground ,dracula-orange :weight bold)
                (magit-process-ok :foreground ,dracula-green :weight bold)
-               (magit-section-heading :foreground ,dracula-pink :weight bold)
-               (magit-section-highlight :background ,bg3)
                ;; message
                (message-mml :foreground ,dracula-green :weight normal)
                (message-header-xheader :foreground ,dracula-cyan :weight normal)
@@ -320,10 +341,12 @@
                (mu4e-unread-face :foreground ,dracula-pink :weight normal)
                (mu4e-view-url-number-face :foreground ,dracula-purple)
                (mu4e-highlight-face :background ,dracula-bg
-                                    :foreground ,dracula-yellow)
+                                    :foreground ,dracula-yellow
+                                    :extend t)
                (mu4e-header-highlight-face :background ,dracula-current
                                            :foreground ,dracula-fg
-                                           :underline nil :weight bold)
+                                           :underline nil :weight bold
+                                           :extend t)
                (mu4e-header-key-face :inherit message-mml)
                (mu4e-header-marks-face :foreground ,dracula-purple)
                (mu4e-cited-1-face :foreground ,dracula-purple)
@@ -420,6 +443,17 @@
                ;; spam
                (spam :inherit gnus-summary-normal-read :foreground ,dracula-orange
                      :strike-through t :slant oblique)
+               ;; tab-bar & tab-line (since Emacs 27.1)
+               (tab-bar :foreground ,dracula-pink :background ,bg2
+                        :inherit variable-pitch)
+               (tab-bar-tab :background ,dracula-current :inherit tab-bar)
+               (tab-bar-tab-inactive :foreground ,dracula-purple :background ,bg3
+                                     :inherit tab-bar-tab)
+               (tab-line :height 0.9 :foreground ,dracula-pink
+                         :background ,bg2 :inherit variable-pitch)
+               (tab-line-tab :background ,dracula-current :inherit tab-line)
+               (tab-line-tab-inactive :foreground ,dracula-purple :background ,bg3
+                                      :inherit tab-line-tab)
                ;; term
                (term :foreground ,dracula-fg :background ,dracula-bg)
                (term-color-black :foreground ,bg3 :background ,bg3)
