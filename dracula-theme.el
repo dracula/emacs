@@ -56,7 +56,9 @@
                (region :background ,dracula-yellow :foreground ,dracula-bg :extend t)
                (trailing-whitespace :foreground nil :background ,dracula-orange)
                (vertical-border :foreground ,bg2)
+               (success :foreground ,dracula-green)
                (warning :foreground ,dracula-orange)
+               (error :foreground ,dracula-red)
                (header-line :background ,dracula-bg)
                ;; syntax
                (font-lock-builtin-face :foreground ,dracula-orange)
