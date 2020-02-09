@@ -458,13 +458,13 @@
                                       :inherit tab-line-tab)
                ;; term
                (term :foreground ,dracula-fg :background ,dracula-bg)
-               (term-color-black :foreground ,bg3 :background ,bg3)
+               (term-color-black :foreground ,dracula-bg :background ,dracula-bg)
                (term-color-blue :foreground ,dracula-purple :background ,dracula-purple)
                (term-color-cyan :foreground ,dracula-cyan :background ,dracula-cyan)
                (term-color-green :foreground ,dracula-green :background ,dracula-green)
                (term-color-magenta :foreground ,dracula-pink :background ,dracula-pink)
                (term-color-red :foreground ,dracula-red :background ,dracula-red)
-               (term-color-white :foreground ,fg2 :background ,fg2)
+               (term-color-white :foreground ,dracula-fg :background ,dracula-fg)
                (term-color-yellow :foreground ,dracula-yellow :background ,dracula-yellow)
                ;; undo-tree
                (undo-tree-visualizer-current-face :foreground ,dracula-orange)
