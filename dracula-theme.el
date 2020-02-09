@@ -19,7 +19,7 @@
 
 ;; Assigment form: VARIABLE COLOR [TTY-COLOR]
 (let ((colors '(;; Upstream theme color
-                (dracula-bg      "#282a36" "#000000") ; official background
+                (dracula-bg      "#282a36" nil) ; official background
                 (dracula-current "#44475a") ; official current-line/selection
                 (dracula-fg      "#f8f8f2") ; official foreground
                 (dracula-comment "#6272a4") ; official comment
