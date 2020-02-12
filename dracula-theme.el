@@ -22,7 +22,7 @@
                 (dracula-bg      "#282a36" "#262626" nil)             ; official background
                 (dracula-current "#44475a" "#262626" "brightblack")   ; official current-line/selection
                 (dracula-fg      "#f8f8f2" "white"   "white")         ; official foreground
-                (dracula-comment "#6272a4" "#525252" "blue")          ; official comment
+                (dracula-comment "#6272a4" "#595959" "blue")          ; official comment
                 (dracula-cyan    "#8be9fd" "#88eeff" "brightcyan")    ; official cyan
                 (dracula-green   "#50fa7b" "#55ff77" "green")         ; official green
                 (dracula-orange  "#ffb86c" "#ffbb66" "brightred")     ; official orange
