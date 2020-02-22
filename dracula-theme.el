@@ -19,9 +19,9 @@
 
 ;; Assigment form: VARIABLE COLOR [TTY-COLOR]
 (let ((colors '(;; Upstream theme color
-                (dracula-bg      "#282a36" "#262626" nil)             ; official background
+                (dracula-bg      "#282a36" "#262626" nil) ; official background
+                (dracula-fg      "#f8f8f2" "brightwhite" "brightwhite") ; official foreground
                 (dracula-current "#44475a" "#262626" "brightblack")   ; official current-line/selection
-                (dracula-fg      "#f8f8f2" "white"   "white")         ; official foreground
                 (dracula-comment "#6272a4" "#595959" "blue")          ; official comment
                 (dracula-cyan    "#8be9fd" "#88eeff" "brightcyan")    ; official cyan
                 (dracula-green   "#50fa7b" "#55ff77" "green")         ; official green
@@ -48,7 +48,7 @@
                (hl-line :background ,dracula-current :extend t)
                (info-quoted-name :foreground ,dracula-orange)
                (info-string :foreground ,dracula-yellow)
-               (lazy-highlight :foreground ,fg2 :background ,bg3)
+               (lazy-highlight :foreground ,fg2 :background ,bg2)
                (link :foreground ,dracula-cyan :underline t)
                (linum :slant italic :foreground ,bg4 :background ,dracula-bg)
                (line-number :slant italic :foreground ,bg4 :background ,dracula-bg)
