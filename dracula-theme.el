@@ -20,16 +20,16 @@
 ;; Assigment form: VARIABLE COLOR [TTY-COLOR]
 (let ((colors '(;; Upstream theme color
                 (dracula-bg      "#282a36" "#262626" nil) ; official background
-                (dracula-fg      "#f8f8f2" "brightwhite" "brightwhite") ; official foreground
-                (dracula-current "#44475a" "#262626" "brightblack")   ; official current-line/selection
-                (dracula-comment "#6272a4" "#595959" "blue")          ; official comment
-                (dracula-cyan    "#8be9fd" "#88eeff" "brightcyan")    ; official cyan
-                (dracula-green   "#50fa7b" "#55ff77" "green")         ; official green
-                (dracula-orange  "#ffb86c" "#ffbb66" "brightred")     ; official orange
-                (dracula-pink    "#ff79c6" "#ff77cc" "magenta")       ; official pink
+                (dracula-fg      "#f8f8f2" "#ffffff" "brightwhite") ; official foreground
+                (dracula-current "#44475a" "#262626" "brightblack") ; official current-line/selection
+                (dracula-comment "#6272a4" "#7a7a7a" "blue")        ; official comment
+                (dracula-cyan    "#8be9fd" "#88eeff" "brightcyan")  ; official cyan
+                (dracula-green   "#50fa7b" "#55ff77" "green")       ; official green
+                (dracula-orange  "#ffb86c" "#ffbb66" "brightred")   ; official orange
+                (dracula-pink    "#ff79c6" "#ff77cc" "magenta")     ; official pink
                 (dracula-purple  "#bd93f9" "#bb99ff" "brightmagenta") ; official purple
-                (dracula-red     "#ff5555" "#ff6655" "red")           ; official red
-                (dracula-yellow  "#f1fa8c" "#ffff88" "yellow")        ; official yellow
+                (dracula-red     "#ff5555" "#ff6655" "red")         ; official red
+                (dracula-yellow  "#f1fa8c" "#ffff88" "yellow")      ; official yellow
                 ;; Other colors
                 (bg2             "#373844" "#2e2e2e" "brightblack")
                 (bg3             "#464752" "#262626" "brightblack")
