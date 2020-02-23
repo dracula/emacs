@@ -9,6 +9,23 @@
 All instructions can be found at
 [draculatheme.com/emacs](https://draculatheme.com/emacs).
 
+## Test
+
+This repository contains a small script named `start_emacs_test.sh`,
+which helps you to test this color theme in various environment
+(graphical, 256+ colors terminals, 16 colors terminals).
+
+    # Graphical test
+    ./start_emacs_test.sh
+
+    # Full color terminal
+    ./start_emacs_test.sh -nw 256
+
+    # TTY like env
+    ./start_emacs_test.sh -nw 16
+
+This script requires the xterm terminfo files.
+
 ## Team
 
 This theme is maintained by the following person(s) and a bunch of
