@@ -141,8 +141,8 @@
                (enh-ruby-regexp-delimiter-face :foreground ,dracula-yellow)
                (enh-ruby-string-delimiter-face :foreground ,dracula-yellow)
                ;; flyspell
-               (flyspell-duplicate :foreground ,dracula-orange :weight bold :underline (:style wave))
-               (flyspell-incorrect :foreground ,dracula-red :weight bold :underline (:style wave))
+               (flyspell-duplicate :underline (:style wave :color ,dracula-orange))
+               (flyspell-incorrect :underline (:style wave :color ,dracula-red))
                ;; font-latex
                (font-latex-bold-face :foreground ,dracula-purple)
                (font-latex-italic-face :foreground ,dracula-pink :slant italic)
