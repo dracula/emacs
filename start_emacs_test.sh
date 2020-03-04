@@ -17,4 +17,5 @@ for arg in $*; do
 done
 
 [ "$TERM_TEST" = 'yes' ] && export TERM=xterm-$COLOR
-emacs -Q --debug-init -l test-profile.el $ARGS
+[ -z "$EMACS" ] && EMACS=emacs
+$EMACS -Q --debug-init -l test-profile.el $ARGS
