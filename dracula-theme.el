@@ -19,25 +19,25 @@
 
 ;; Assigment form: VARIABLE COLOR [TTY-COLOR]
 (let ((colors '(;; Upstream theme color
-                (dracula-bg      "#282a36" nil) ; official background
-                (dracula-current "#44475a") ; official current-line/selection
-                (dracula-fg      "#f8f8f2") ; official foreground
-                (dracula-comment "#6272a4") ; official comment
-                (dracula-cyan    "#8be9fd") ; official cyan
-                (dracula-green   "#50fa7b") ; official green
-                (dracula-orange  "#ffb86c") ; official orange
-                (dracula-pink    "#ff79c6") ; official pink
-                (dracula-purple  "#bd93f9") ; official purple
-                (dracula-red     "#ff5555") ; official red
-                (dracula-yellow  "#f1fa8c") ; official yellow
+                (dracula-bg      "#282a36" "#262626" nil) ; official background
+                (dracula-fg      "#f8f8f2" "#ffffff" "brightwhite") ; official foreground
+                (dracula-current "#44475a" "#262626" "brightblack") ; official current-line/selection
+                (dracula-comment "#6272a4" "#7a7a7a" "blue")        ; official comment
+                (dracula-cyan    "#8be9fd" "#88eeff" "brightcyan")  ; official cyan
+                (dracula-green   "#50fa7b" "#55ff77" "green")       ; official green
+                (dracula-orange  "#ffb86c" "#ffbb66" "brightred")   ; official orange
+                (dracula-pink    "#ff79c6" "#ff77cc" "magenta")     ; official pink
+                (dracula-purple  "#bd93f9" "#bb99ff" "brightmagenta") ; official purple
+                (dracula-red     "#ff5555" "#ff6655" "red")         ; official red
+                (dracula-yellow  "#f1fa8c" "#ffff88" "yellow")      ; official yellow
                 ;; Other colors
-                (bg2             "#373844")
-                (bg3             "#464752")
-                (bg4             "#565761")
-                (fg2             "#e2e2dc")
-                (fg3             "#ccccc7")
-                (fg4             "#b6b6b2")
-                (other-blue      "#0189cc")))
+                (bg2             "#373844" "#2e2e2e" "brightblack")
+                (bg3             "#464752" "#262626" "brightblack")
+                (bg4             "#565761" "#3f3f3f" "brightblack")
+                (fg2             "#e2e2dc" "#bfbfbf" "brightwhite")
+                (fg3             "#ccccc7" "#cccccc" "white")
+                (fg4             "#b6b6b2" "#bbbbbb" "white")
+                (other-blue      "#0189cc" "#0088cc" "brightblue")))
       (faces '(;; default
                (cursor :background ,fg3)
                (default :background ,dracula-bg :foreground ,dracula-fg)
@@ -48,7 +48,7 @@
                (hl-line :background ,dracula-current :extend t)
                (info-quoted-name :foreground ,dracula-orange)
                (info-string :foreground ,dracula-yellow)
-               (lazy-highlight :foreground ,fg2 :background ,bg3)
+               (lazy-highlight :foreground ,fg2 :background ,bg2)
                (link :foreground ,dracula-cyan :underline t)
                (linum :slant italic :foreground ,bg4 :background ,dracula-bg)
                (line-number :slant italic :foreground ,bg4 :background ,dracula-bg)
@@ -511,17 +511,19 @@
          'dracula
          (let ((color-names (mapcar #'car colors))
                (graphic-colors (mapcar #'cadr colors))
-               (tty-colors (mapcar #'car (mapcar #'last colors))))
-           (cl-flet* ((expand-for-tty (spec) (cl-progv color-names tty-colors
-                                               (eval `(backquote ,spec))))
-                      (expand-for-graphic (spec) (cl-progv color-names graphic-colors
-                                                   (eval `(backquote ,spec)))))
-             (cl-loop for (face . spec) in faces
-                      collect `(,face
-                                ((((min-colors 16777216))
-                                  ,(expand-for-graphic spec))
-                                 (t
-                                  ,(expand-for-tty spec)))))))))
+               (term-colors (mapcar #'car (mapcar #'cddr colors)))
+               (tty-colors (mapcar #'car (mapcar #'last colors)))
+               (expand-for-kind (lambda (kind spec)
+                                  (cl-progv color-names kind
+                                    (eval `(backquote ,spec))))))
+           (cl-loop for (face . spec) in faces
+                    collect `(,face
+                              ((((min-colors 16777216)) ; fully graphical envs
+                                ,(funcall expand-for-kind graphic-colors spec))
+                               (((min-colors 256))      ; terminal withs 256 colors
+                                ,(funcall expand-for-kind term-colors spec))
+                               (t                       ; should be only tty-like envs
+                                ,(funcall expand-for-kind tty-colors spec))))))))
 
 ;;;###autoload
 (when load-file-name
