@@ -451,16 +451,20 @@
                (spam :inherit gnus-summary-normal-read :foreground ,dracula-orange
                      :strike-through t :slant oblique)
                ;; tab-bar & tab-line (since Emacs 27.1)
-               (tab-bar :foreground ,dracula-pink :background ,bg2
+               (tab-bar :foreground ,dracula-purple :background ,dracula-current
                         :inherit variable-pitch)
-               (tab-bar-tab :background ,dracula-current :inherit tab-bar)
-               (tab-bar-tab-inactive :foreground ,dracula-purple :background ,bg3
-                                     :inherit tab-bar-tab)
-               (tab-line :height 0.9 :foreground ,dracula-pink
-                         :background ,bg2 :inherit variable-pitch)
-               (tab-line-tab :background ,dracula-current :inherit tab-line)
-               (tab-line-tab-inactive :foreground ,dracula-purple :background ,bg3
-                                      :inherit tab-line-tab)
+               (tab-bar-tab :foreground ,dracula-pink :background ,dracula-bg
+                            :box (:line-width 2 :color ,dracula-bg :style nil))
+               (tab-bar-tab-inactive :foreground ,dracula-purple :background ,bg2
+                                     :box (:line-width 2 :color ,bg2 :style nil))
+               (tab-line :foreground ,dracula-purple :background ,dracula-current
+                         :height 0.9 :inherit variable-pitch)
+               (tab-line-tab :foreground ,dracula-pink :background ,dracula-bg
+                             :box (:line-width 2 :color ,dracula-bg :style nil))
+               (tab-line-tab-inactive :foreground ,dracula-purple :background ,bg2
+                                      :box (:line-width 2 :color ,bg2 :style nil))
+               (tab-line-tab-current :inherit tab-line-tab)
+               (tab-line-close-highlight :foreground ,dracula-red)
                ;; term
                (term :foreground ,dracula-fg :background ,dracula-bg)
                (term-color-black :foreground ,dracula-bg :background ,dracula-bg)
