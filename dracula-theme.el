@@ -17,6 +17,36 @@
 (require 'cl-lib)
 (deftheme dracula)
 
+(defgroup dracula nil
+  "Dracula theme options.
+The theme has to be reloaded after changing anything in this group."
+  :group 'faces)
+
+(defcustom dracula-enlarge-headings t
+  "Use different font sizes for some headings and titles."
+  :type 'boolean
+  :group 'dracula)
+
+(defcustom dracula-height-title-1 1.3
+  "Font size 100%."
+  :type 'number
+  :group 'dracula)
+
+(defcustom dracula-height-title-2 1.1
+  "Font size 110%."
+  :type 'number
+  :group 'dracula)
+
+(defcustom dracula-height-title-3 1.0
+  "Font size 130%."
+  :type 'number
+  :group 'dracula)
+
+(defcustom dracula-height-doc-title 1.44
+  "Font size 144%."
+  :type 'number
+  :group 'dracula)
+
 ;; Assigment form: VARIABLE COLOR [TTY-COLOR]
 (let ((colors '(;; Upstream theme color
                 (dracula-bg      "#282a36" "#262626" nil) ; official background
@@ -373,16 +403,24 @@
                (org-date :foreground ,dracula-cyan :underline t)
                (org-document-info :foreground ,other-blue)
                (org-document-info-keyword :foreground ,dracula-comment)
-               (org-document-title :weight bold :foreground ,dracula-orange :height 1.44)
+               (org-document-title :weight bold :foreground ,dracula-orange
+                                   ,@(when dracula-enlarge-headings
+                                       (list :height dracula-height-doc-title)))
                (org-done :foreground ,dracula-green)
                (org-ellipsis :foreground ,dracula-comment)
                (org-footnote :foreground ,other-blue)
                (org-formula :foreground ,dracula-pink)
                (org-headline-done :foreground ,dracula-comment :weight normal :strike-through t)
                (org-hide :foreground ,dracula-bg :background ,dracula-bg)
-               (org-level-1 :inherit bold :foreground ,dracula-pink :height 1.3)
-               (org-level-2 :inherit bold :foreground ,dracula-purple :height 1.1)
-               (org-level-3 :weight normal :foreground ,dracula-green :height 1.0)
+               (org-level-1 :inherit bold :foreground ,dracula-pink
+                            ,@(when dracula-enlarge-headings
+                                (list :height dracula-height-title-1)))
+               (org-level-2 :inherit bold :foreground ,dracula-purple
+                            ,@(when dracula-enlarge-headings
+                                (list :height dracula-height-title-2)))
+               (org-level-3 :weight normal :foreground ,dracula-green
+                            ,@(when dracula-enlarge-headings
+                                (list :height dracula-height-title-3)))
                (org-level-4 :weight normal :foreground ,dracula-yellow)
                (org-level-5 :weight normal :foreground ,dracula-cyan)
                (org-level-6 :weight normal :foreground ,dracula-orange)
