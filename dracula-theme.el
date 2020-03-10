@@ -47,6 +47,11 @@ The theme has to be reloaded after changing anything in this group."
   :type 'number
   :group 'dracula)
 
+(defcustom dracula-alternate-mode-line-and-minibuffer nil
+  "Use less bold and pink in the minibuffer."
+  :type 'boolean
+  :group 'dracula)
+
 ;; Assigment form: VARIABLE COLOR [TTY-COLOR]
 (let ((colors '(;; Upstream theme color
                 (dracula-bg      "#282a36" "#262626" nil) ; official background
@@ -83,7 +88,10 @@ The theme has to be reloaded after changing anything in this group."
                (linum :slant italic :foreground ,bg4 :background ,dracula-bg)
                (line-number :slant italic :foreground ,bg4 :background ,dracula-bg)
                (match :background ,dracula-yellow :foreground ,dracula-bg)
-               (minibuffer-prompt :weight bold :foreground ,dracula-pink)
+               (minibuffer-prompt
+                ,@(if dracula-alternate-mode-line-and-minibuffer
+                      (list :weight 'normal :foreground dracula-fg)
+                    (list :weight 'bold :foreground dracula-pink)))
                (region :inherit match :extend t)
                (trailing-whitespace :foreground nil :background ,dracula-orange)
                (vertical-border :foreground ,bg2)
@@ -296,9 +304,12 @@ The theme has to be reloaded after changing anything in this group."
                ;; icomplete
                (icompletep-determined :foreground ,dracula-orange)
                ;; ido
-               (ido-first-match :foreground ,dracula-pink :weight bold)
+               (ido-first-match
+                ,@(if dracula-alternate-mode-line-and-minibuffer
+                      (list :weight 'normal :foreground dracula-green)
+                    (list :weight 'bold :foreground dracula-pink)))
                (ido-only-match :foreground ,dracula-orange)
-               (ido-subdir :foreground ,dracula-orange)
+               (ido-subdir :foreground ,dracula-yellow)
                (ido-virtual :foreground ,dracula-cyan)
                (ido-incomplete-regexp :inherit font-lock-warning-face)
                (ido-indicator :foreground ,dracula-fg :background ,dracula-pink)
@@ -372,8 +383,17 @@ The theme has to be reloaded after changing anything in this group."
                (message-mml :foreground ,dracula-green :weight normal)
                (message-header-xheader :foreground ,dracula-cyan :weight normal)
                ;; mode-line
-               (mode-line :foreground nil :background ,dracula-current :box ,dracula-current)
-               (mode-line-inactive :foreground ,dracula-fg :background ,bg2 :box ,bg2)
+               (mode-line :background ,dracula-current
+                          :box ,dracula-current :inverse-video nil
+                          ,@(if dracula-alternate-mode-line-and-minibuffer
+                                (list :foreground fg3)
+                              (list :foreground nil)))
+               (mode-line-inactive
+                :inverse-video nil
+                ,@(if dracula-alternate-mode-line-and-minibuffer
+                      (list :foreground dracula-comment :background dracula-bg
+                            :box dracula-bg)
+                    (list :foreground dracula-fg :background bg2 :box bg2)))
                ;; mu4e
                (mu4e-unread-face :foreground ,dracula-pink :weight normal)
                (mu4e-view-url-number-face :foreground ,dracula-purple)
