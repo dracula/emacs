@@ -388,6 +388,32 @@ The theme has to be reloaded after changing anything in this group."
                (magit-log-author :foreground ,fg3)
                (magit-process-ng :foreground ,dracula-orange :weight bold)
                (magit-process-ok :foreground ,dracula-green :weight bold)
+               ;; markdown
+               (markdown-blockquote-face :foreground ,dracula-orange)
+               (markdown-code-face :foreground ,dracula-orange)
+               (markdown-footnote-face :foreground ,other-blue)
+               (markdown-header-face :weight normal)
+               (markdown-header-face-1
+                :inherit bold :foreground ,dracula-pink
+                ,@(when dracula-enlarge-headings
+                    (list :height dracula-height-title-1)))
+               (markdown-header-face-2
+                :inherit bold :foreground ,dracula-purple
+                ,@(when dracula-enlarge-headings
+                    (list :height dracula-height-title-2)))
+               (markdown-header-face-3
+                :foreground ,dracula-green
+                ,@(when dracula-enlarge-headings
+                    (list :height dracula-height-title-3)))
+               (markdown-header-face-4 :foreground ,dracula-yellow)
+               (markdown-header-face-5 :foreground ,dracula-cyan)
+               (markdown-header-face-6 :foreground ,dracula-orange)
+               (markdown-header-face-7 :foreground ,other-blue)
+               (markdown-header-face-8 :foreground ,dracula-fg)
+               (markdown-inline-code-face :foreground ,dracula-yellow)
+               (markdown-plain-url-face :inherit link)
+               (markdown-pre-face :foreground ,dracula-orange)
+               (markdown-table-face :foreground ,dracula-purple)
                ;; message
                (message-mml :foreground ,dracula-green :weight normal)
                (message-header-xheader :foreground ,dracula-cyan :weight normal)
@@ -439,7 +465,8 @@ The theme has to be reloaded after changing anything in this group."
                (org-ellipsis :foreground ,dracula-comment)
                (org-footnote :foreground ,other-blue)
                (org-formula :foreground ,dracula-pink)
-               (org-headline-done :foreground ,dracula-comment :weight normal :strike-through t)
+               (org-headline-done :foreground ,dracula-comment
+                                  :weight normal :strike-through t)
                (org-hide :foreground ,dracula-bg :background ,dracula-bg)
                (org-level-1 :inherit bold :foreground ,dracula-pink
                             ,@(when dracula-enlarge-headings
