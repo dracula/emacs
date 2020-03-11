@@ -17,8 +17,12 @@
 (require 'cl-lib)
 (deftheme dracula)
 
+
+;;;; Configuration options:
+
 (defgroup dracula nil
   "Dracula theme options.
+
 The theme has to be reloaded after changing anything in this group."
   :group 'faces)
 
@@ -51,6 +55,9 @@ The theme has to be reloaded after changing anything in this group."
   "Use less bold and pink in the minibuffer."
   :type 'boolean
   :group 'dracula)
+
+
+;;;; Theme definition:
 
 ;; Assigment form: VARIABLE COLOR [TTY-COLOR]
 (let ((colors '(;; Upstream theme color
@@ -587,6 +594,7 @@ The theme has to be reloaded after changing anything in this group."
                                (t                       ; should be only tty-like envs
                                 ,(funcall expand-for-kind tty-colors spec))))))))
 
+
 ;;;###autoload
 (when load-file-name
   (add-to-list 'custom-theme-load-path
