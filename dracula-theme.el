@@ -82,6 +82,7 @@ The theme has to be reloaded after changing anything in this group."
                 (other-blue      "#0189cc" "#0088cc" "brightblue")))
       (faces '(;; default
                (cursor :background ,fg3)
+               (completions-first-difference :foreground ,dracula-pink :weight bold)
                (default :background ,dracula-bg :foreground ,dracula-fg)
                (default-italic :slant italic)
                (ffap :foreground ,fg4)
@@ -99,6 +100,7 @@ The theme has to be reloaded after changing anything in this group."
                 ,@(if dracula-alternate-mode-line-and-minibuffer
                       (list :weight 'normal :foreground dracula-fg)
                     (list :weight 'bold :foreground dracula-pink)))
+               (read-multiple-choice-face :inherit completions-first-difference)
                (region :inherit match :extend t)
                (trailing-whitespace :foreground nil :background ,dracula-orange)
                (vertical-border :foreground ,bg2)
