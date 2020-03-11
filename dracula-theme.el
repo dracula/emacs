@@ -466,12 +466,12 @@ The theme has to be reloaded after changing anything in this group."
                (org-upcoming-deadline :foreground ,dracula-yellow)
                (org-warning :weight bold :foreground ,dracula-pink)
                ;; outline
-               (outline-1 :foreground ,dracula-green)
+               (outline-1 :foreground ,dracula-pink)
                (outline-2 :foreground ,dracula-purple)
-               (outline-3 :foreground ,dracula-cyan)
-               (outline-4 :foreground ,dracula-orange)
-               (outline-5 :foreground ,dracula-orange)
-               (outline-6 :foreground ,other-blue)
+               (outline-3 :foreground ,dracula-green)
+               (outline-4 :foreground ,dracula-yellow)
+               (outline-5 :foreground ,dracula-cyan)
+               (outline-6 :foreground ,dracula-orange)
                ;; powerline
                (powerline-evil-base-face :foreground ,bg2)
                (powerline-evil-emacs-face :inherit powerline-evil-base-face :background ,dracula-yellow)
