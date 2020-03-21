@@ -17,6 +17,48 @@
 (require 'cl-lib)
 (deftheme dracula)
 
+
+;;;; Configuration options:
+
+(defgroup dracula nil
+  "Dracula theme options.
+
+The theme has to be reloaded after changing anything in this group."
+  :group 'faces)
+
+(defcustom dracula-enlarge-headings t
+  "Use different font sizes for some headings and titles."
+  :type 'boolean
+  :group 'dracula)
+
+(defcustom dracula-height-title-1 1.3
+  "Font size 100%."
+  :type 'number
+  :group 'dracula)
+
+(defcustom dracula-height-title-2 1.1
+  "Font size 110%."
+  :type 'number
+  :group 'dracula)
+
+(defcustom dracula-height-title-3 1.0
+  "Font size 130%."
+  :type 'number
+  :group 'dracula)
+
+(defcustom dracula-height-doc-title 1.44
+  "Font size 144%."
+  :type 'number
+  :group 'dracula)
+
+(defcustom dracula-alternate-mode-line-and-minibuffer nil
+  "Use less bold and pink in the minibuffer."
+  :type 'boolean
+  :group 'dracula)
+
+
+;;;; Theme definition:
+
 ;; Assigment form: VARIABLE COLOR [TTY-COLOR]
 (let ((colors '(;; Upstream theme color
                 (dracula-bg      "#282a36" "#262626" nil) ; official background
@@ -40,6 +82,7 @@
                 (other-blue      "#0189cc" "#0088cc" "brightblue")))
       (faces '(;; default
                (cursor :background ,fg3)
+               (completions-first-difference :foreground ,dracula-pink :weight bold)
                (default :background ,dracula-bg :foreground ,dracula-fg)
                (default-italic :slant italic)
                (ffap :foreground ,fg4)
@@ -53,7 +96,11 @@
                (linum :slant italic :foreground ,bg4 :background ,dracula-bg)
                (line-number :slant italic :foreground ,bg4 :background ,dracula-bg)
                (match :background ,dracula-yellow :foreground ,dracula-bg)
-               (minibuffer-prompt :weight bold :foreground ,dracula-pink)
+               (minibuffer-prompt
+                ,@(if dracula-alternate-mode-line-and-minibuffer
+                      (list :weight 'normal :foreground dracula-fg)
+                    (list :weight 'bold :foreground dracula-pink)))
+               (read-multiple-choice-face :inherit completions-first-difference)
                (region :inherit match :extend t)
                (trailing-whitespace :foreground nil :background ,dracula-orange)
                (vertical-border :foreground ,bg2)
@@ -266,9 +313,12 @@
                ;; icomplete
                (icompletep-determined :foreground ,dracula-orange)
                ;; ido
-               (ido-first-match :foreground ,dracula-pink :weight bold)
+               (ido-first-match
+                ,@(if dracula-alternate-mode-line-and-minibuffer
+                      (list :weight 'normal :foreground dracula-green)
+                    (list :weight 'bold :foreground dracula-pink)))
                (ido-only-match :foreground ,dracula-orange)
-               (ido-subdir :foreground ,dracula-orange)
+               (ido-subdir :foreground ,dracula-yellow)
                (ido-virtual :foreground ,dracula-cyan)
                (ido-incomplete-regexp :inherit font-lock-warning-face)
                (ido-indicator :foreground ,dracula-fg :background ,dracula-pink)
@@ -338,12 +388,47 @@
                (magit-log-author :foreground ,fg3)
                (magit-process-ng :foreground ,dracula-orange :weight bold)
                (magit-process-ok :foreground ,dracula-green :weight bold)
+               ;; markdown
+               (markdown-blockquote-face :foreground ,dracula-orange)
+               (markdown-code-face :foreground ,dracula-orange)
+               (markdown-footnote-face :foreground ,other-blue)
+               (markdown-header-face :weight normal)
+               (markdown-header-face-1
+                :inherit bold :foreground ,dracula-pink
+                ,@(when dracula-enlarge-headings
+                    (list :height dracula-height-title-1)))
+               (markdown-header-face-2
+                :inherit bold :foreground ,dracula-purple
+                ,@(when dracula-enlarge-headings
+                    (list :height dracula-height-title-2)))
+               (markdown-header-face-3
+                :foreground ,dracula-green
+                ,@(when dracula-enlarge-headings
+                    (list :height dracula-height-title-3)))
+               (markdown-header-face-4 :foreground ,dracula-yellow)
+               (markdown-header-face-5 :foreground ,dracula-cyan)
+               (markdown-header-face-6 :foreground ,dracula-orange)
+               (markdown-header-face-7 :foreground ,other-blue)
+               (markdown-header-face-8 :foreground ,dracula-fg)
+               (markdown-inline-code-face :foreground ,dracula-yellow)
+               (markdown-plain-url-face :inherit link)
+               (markdown-pre-face :foreground ,dracula-orange)
+               (markdown-table-face :foreground ,dracula-purple)
                ;; message
                (message-mml :foreground ,dracula-green :weight normal)
                (message-header-xheader :foreground ,dracula-cyan :weight normal)
                ;; mode-line
-               (mode-line :foreground nil :background ,dracula-current :box ,dracula-current)
-               (mode-line-inactive :foreground ,dracula-fg :background ,bg2 :box ,bg2)
+               (mode-line :background ,dracula-current
+                          :box ,dracula-current :inverse-video nil
+                          ,@(if dracula-alternate-mode-line-and-minibuffer
+                                (list :foreground fg3)
+                              (list :foreground nil)))
+               (mode-line-inactive
+                :inverse-video nil
+                ,@(if dracula-alternate-mode-line-and-minibuffer
+                      (list :foreground dracula-comment :background dracula-bg
+                            :box dracula-bg)
+                    (list :foreground dracula-fg :background bg2 :box bg2)))
                ;; mu4e
                (mu4e-unread-face :foreground ,dracula-pink :weight normal)
                (mu4e-view-url-number-face :foreground ,dracula-purple)
@@ -373,16 +458,25 @@
                (org-date :foreground ,dracula-cyan :underline t)
                (org-document-info :foreground ,other-blue)
                (org-document-info-keyword :foreground ,dracula-comment)
-               (org-document-title :weight bold :foreground ,dracula-orange :height 1.44)
+               (org-document-title :weight bold :foreground ,dracula-orange
+                                   ,@(when dracula-enlarge-headings
+                                       (list :height dracula-height-doc-title)))
                (org-done :foreground ,dracula-green)
                (org-ellipsis :foreground ,dracula-comment)
                (org-footnote :foreground ,other-blue)
                (org-formula :foreground ,dracula-pink)
-               (org-headline-done :foreground ,dracula-comment :weight normal :strike-through t)
+               (org-headline-done :foreground ,dracula-comment
+                                  :weight normal :strike-through t)
                (org-hide :foreground ,dracula-bg :background ,dracula-bg)
-               (org-level-1 :inherit bold :foreground ,dracula-pink :height 1.3)
-               (org-level-2 :inherit bold :foreground ,dracula-purple :height 1.1)
-               (org-level-3 :weight normal :foreground ,dracula-green :height 1.0)
+               (org-level-1 :inherit bold :foreground ,dracula-pink
+                            ,@(when dracula-enlarge-headings
+                                (list :height dracula-height-title-1)))
+               (org-level-2 :inherit bold :foreground ,dracula-purple
+                            ,@(when dracula-enlarge-headings
+                                (list :height dracula-height-title-2)))
+               (org-level-3 :weight normal :foreground ,dracula-green
+                            ,@(when dracula-enlarge-headings
+                                (list :height dracula-height-title-3)))
                (org-level-4 :weight normal :foreground ,dracula-yellow)
                (org-level-5 :weight normal :foreground ,dracula-cyan)
                (org-level-6 :weight normal :foreground ,dracula-orange)
@@ -401,12 +495,12 @@
                (org-upcoming-deadline :foreground ,dracula-yellow)
                (org-warning :weight bold :foreground ,dracula-pink)
                ;; outline
-               (outline-1 :foreground ,dracula-green)
+               (outline-1 :foreground ,dracula-pink)
                (outline-2 :foreground ,dracula-purple)
-               (outline-3 :foreground ,dracula-cyan)
-               (outline-4 :foreground ,dracula-orange)
-               (outline-5 :foreground ,dracula-orange)
-               (outline-6 :foreground ,other-blue)
+               (outline-3 :foreground ,dracula-green)
+               (outline-4 :foreground ,dracula-yellow)
+               (outline-5 :foreground ,dracula-cyan)
+               (outline-6 :foreground ,dracula-orange)
                ;; powerline
                (powerline-evil-base-face :foreground ,bg2)
                (powerline-evil-emacs-face :inherit powerline-evil-base-face :background ,dracula-yellow)
@@ -529,6 +623,7 @@
                                (t                       ; should be only tty-like envs
                                 ,(funcall expand-for-kind tty-colors spec))))))))
 
+
 ;;;###autoload
 (when load-file-name
   (add-to-list 'custom-theme-load-path
