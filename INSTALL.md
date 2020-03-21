@@ -16,3 +16,8 @@ To load a theme add the following to your init.el
 
     (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
     (load-theme 'dracula t)
+
+#### Configure
+
+Some aspects of this theme are customizable.  You can change them by
+doing `M-x customize-group dracula`.  Then restart Emacs to apply them.
