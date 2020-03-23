@@ -56,6 +56,11 @@ The theme has to be reloaded after changing anything in this group."
   :type 'boolean
   :group 'dracula)
 
+(defcustom dracula-use-24-bit-colors-on-256-colors-terms nil
+  "Use true colors even on terminals announcing less capabilities."
+  :type 'boolean
+  :group 'dracula)
+
 
 ;;;; Theme definition:
 
@@ -611,17 +616,21 @@ The theme has to be reloaded after changing anything in this group."
                (graphic-colors (mapcar #'cadr colors))
                (term-colors (mapcar #'car (mapcar #'cddr colors)))
                (tty-colors (mapcar #'car (mapcar #'last colors)))
-               (expand-for-kind (lambda (kind spec)
-                                  (cl-progv color-names kind
-                                    (eval `(backquote ,spec))))))
+               (expand-for-kind
+                (lambda (kind spec)
+                  (when (and (string= (symbol-name kind) "term-colors")
+                             dracula-use-24-bit-colors-on-256-colors-terms)
+                    (setq kind 'graphic-colors))
+                  (cl-progv color-names (symbol-value kind)
+                    (eval `(backquote ,spec))))))
            (cl-loop for (face . spec) in faces
                     collect `(,face
                               ((((min-colors 16777216)) ; fully graphical envs
-                                ,(funcall expand-for-kind graphic-colors spec))
+                                ,(funcall expand-for-kind 'graphic-colors spec))
                                (((min-colors 256))      ; terminal withs 256 colors
-                                ,(funcall expand-for-kind term-colors spec))
+                                ,(funcall expand-for-kind 'term-colors spec))
                                (t                       ; should be only tty-like envs
-                                ,(funcall expand-for-kind tty-colors spec))))))))
+                                ,(funcall expand-for-kind 'tty-colors spec))))))))
 
 
 ;;;###autoload
