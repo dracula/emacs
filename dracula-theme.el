@@ -56,10 +56,22 @@ The theme has to be reloaded after changing anything in this group."
   :type 'boolean
   :group 'dracula)
 
-(defcustom dracula-use-24-bit-colors-on-256-colors-terms nil
-  "Use true colors even on terminals announcing less capabilities."
-  :type 'boolean
-  :group 'dracula)
+(defvar dracula-use-24-bit-colors-on-256-colors-terms nil
+  "Use true colors even on terminals announcing less capabilities.
+
+Beware the use of this variable.  Using it may lead to unwanted
+behavior, the most common one being an ugly blue background on
+terminals, which don't understand 24 bit colors.  To avoid this
+blue background, when using this variable, one can try to add the
+following lines in their config file after having load the
+Dracula theme:
+
+    (unless (display-graphic-p)
+      (set-face-background 'default \"black\" nil))
+
+There is a lot of discussion behind the 256 colors theme (see URL
+`https://github.com/dracula/emacs/pull/57').  Please take time to
+read it before opening a new issue about your will.")
 
 
 ;;;; Theme definition:

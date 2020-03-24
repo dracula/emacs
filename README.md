@@ -36,9 +36,6 @@ need to be set before `load-theme` is invoked for Dracula.
 
 ;; Use less pink and bold on the mode-line and minibuffer (default nil)
 (setq dracula-alternate-mode-line-and-minibuffer t)
-
-;; Force 24 bit colors (regular colors) on terminals (default nil)
-(setq dracula-use-24-bit-colors-on-256-colors-terms t)
 ```
 
 ## Test
