@@ -6,7 +6,7 @@
 
 #### Install using Homebrew
 
-    brew install dunn/emacs/helm
+    brew install dunn/emacs/dracula-emacs
 
 #### Install manually
 
