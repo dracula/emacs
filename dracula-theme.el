@@ -76,7 +76,7 @@ read it before opening a new issue about your will.")
 
 ;;;; Theme definition:
 
-;; Assigment form: VARIABLE COLOR [TTY-COLOR]
+;; Assigment form: VARIABLE COLOR [256-COLOR [TTY-COLOR]]
 (let ((colors '(;; Upstream theme color
                 (dracula-bg      "#282a36" "#262626" nil) ; official background
                 (dracula-fg      "#f8f8f2" "#ffffff" "brightwhite") ; official foreground
