@@ -4,10 +4,6 @@
 
     M-x package-install <RET> dracula-theme
 
-#### Install using Homebrew
-
-    brew install dunn/emacs/helm
-
 #### Install manually
 
 Add the emacs theme files to `~/.emacs.d/themes`.
