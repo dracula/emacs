@@ -4,6 +4,10 @@
 
     M-x package-install <RET> dracula-theme
 
+#### Install using Homebrew
+
+    brew install emacs-dracula
+
 #### Install manually
 
 Add the emacs theme files to `~/.emacs.d/themes`.
