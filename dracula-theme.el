@@ -78,7 +78,7 @@ read it before opening a new issue about your will.")
 
 ;; Assigment form: VARIABLE COLOR [256-COLOR [TTY-COLOR]]
 (let ((colors '(;; Upstream theme color
-                (dracula-bg      "#282a36" nil       nil) ; official background
+                (dracula-bg      "#282a36" "unspecified-bg" "unspecified-bg") ; official background
                 (dracula-fg      "#f8f8f2" "#ffffff" "brightwhite") ; official foreground
                 (dracula-current "#44475a" "#303030" "brightblack") ; official current-line/selection
                 (dracula-comment "#6272a4" "#5f5faf" "blue")        ; official comment
@@ -119,7 +119,7 @@ read it before opening a new issue about your will.")
                     (list :weight 'bold :foreground dracula-pink)))
                (read-multiple-choice-face :inherit completions-first-difference)
                (region :inherit match :extend t)
-               (trailing-whitespace :foreground nil :background ,dracula-orange)
+               (trailing-whitespace :foreground "unspecified-fg" :background ,dracula-orange)
                (vertical-border :foreground ,bg2)
                (success :foreground ,dracula-green)
                (warning :foreground ,dracula-orange)
@@ -276,7 +276,7 @@ read it before opening a new issue about your will.")
                (helm-grep-file :foreground ,dracula-fg :background ,dracula-bg)
                (helm-grep-finish :foreground ,fg2 :background ,dracula-bg)
                (helm-grep-lineno :foreground ,dracula-fg :background ,dracula-bg)
-               (helm-grep-match :foreground nil :background nil :inherit helm-match)
+               (helm-grep-match :foreground "unspecified-fg" :background "unspecified-bg" :inherit helm-match)
                (helm-grep-running :foreground ,dracula-green :background ,dracula-bg)
                (helm-header :foreground ,fg2 :background ,dracula-bg :underline nil :box nil)
                (helm-moccur-buffer :foreground ,dracula-green :background ,dracula-bg)
@@ -439,7 +439,7 @@ read it before opening a new issue about your will.")
                           :box ,dracula-current :inverse-video nil
                           ,@(if dracula-alternate-mode-line-and-minibuffer
                                 (list :foreground fg3)
-                              (list :foreground nil)))
+                              (list :foreground "unspecified-fg")))
                (mode-line-inactive
                 :inverse-video nil
                 ,@(if dracula-alternate-mode-line-and-minibuffer
