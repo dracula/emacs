@@ -561,6 +561,13 @@ read it before opening a new issue about your will.")
                ;; spam
                (spam :inherit gnus-summary-normal-read :foreground ,dracula-orange
                      :strike-through t :slant oblique)
+               ;; speedbar (and sr-speedbar)
+               (speedbar-button-face :foreground ,dracula-green)
+               (speedbar-file-face :foreground ,dracula-cyan)
+               (speedbar-directory-face :foreground ,dracula-purple)
+               (speedbar-tag-face :foreground ,dracula-yellow)
+               (speedbar-selected-face :foreground ,dracula-pink)
+               (speedbar-highlight-face :inherit highlight)
                ;; tab-bar & tab-line (since Emacs 27.1)
                (tab-bar :foreground ,dracula-purple :background ,dracula-current
                         :inherit variable-pitch)
