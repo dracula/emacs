@@ -567,7 +567,10 @@ read it before opening a new issue about your will.")
                (speedbar-directory-face :foreground ,dracula-purple)
                (speedbar-tag-face :foreground ,dracula-yellow)
                (speedbar-selected-face :foreground ,dracula-pink)
-               (speedbar-highlight-face :inherit highlight)
+               (speedbar-highlight-face :inherit match)
+               (speedbar-separator-face :background ,dracula-bg
+                                        :foreground ,dracula-fg
+                                        :weight bold)
                ;; tab-bar & tab-line (since Emacs 27.1)
                (tab-bar :foreground ,dracula-purple :background ,dracula-current
                         :inherit variable-pitch)
