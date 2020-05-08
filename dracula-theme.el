@@ -370,6 +370,16 @@ read it before opening a new issue about your will.")
                (js3-instance-member-face :foreground ,dracula-cyan)
                (js3-jsdoc-tag-face :foreground ,dracula-pink)
                (js3-warning-face :underline ,dracula-pink)
+               ;; lsp
+               (lsp-ui-peek-peek :background ,dracula-bg)
+               (lsp-ui-peek-list :background ,bg2)
+               (lsp-ui-peek-filename :foreground ,dracula-pink :weight bold)
+               (lsp-ui-peek-line-number :foreground ,dracula-fg)
+               (lsp-ui-peek-highlight :background ,bg4 :foreground ,fg4
+                                      :distant-foreground ,dracula-bg)
+               (lsp-ui-peek-header :background ,bg3 :foreground ,fg3, :weight bold)
+               (lsp-ui-peek-footer :inherit lsp-ui-peek-header)
+               (lsp-ui-peek-selection :background ,bg4 :foreground ,fg4)
                ;; magit
                (magit-branch-local :foreground ,dracula-cyan)
                (magit-branch-remote :foreground ,dracula-green)
