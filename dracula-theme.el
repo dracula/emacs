@@ -375,11 +375,10 @@ read it before opening a new issue about your will.")
                (lsp-ui-peek-list :background ,bg2)
                (lsp-ui-peek-filename :foreground ,dracula-pink :weight bold)
                (lsp-ui-peek-line-number :foreground ,dracula-fg)
-               (lsp-ui-peek-highlight :background ,bg4 :foreground ,fg4
-                                      :distant-foreground ,dracula-bg)
+               (lsp-ui-peek-highlight :inherit highlight :distant-foreground ,dracula-bg)
                (lsp-ui-peek-header :background ,bg3 :foreground ,fg3, :weight bold)
                (lsp-ui-peek-footer :inherit lsp-ui-peek-header)
-               (lsp-ui-peek-selection :background ,bg4 :foreground ,fg4)
+               (lsp-ui-peek-selection :inherit match)
                (lsp-ui-sideline-symbol :foreground ,fg4 :box (:line-width -1 :color ,fg4) :height 0.99)
                (lsp-ui-sideline-current-symbol :foreground ,dracula-fg :weight ultra-bold
                                                :box (:line-width -1 :color dracula-fg) :height 0.99)
