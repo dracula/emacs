@@ -380,6 +380,13 @@ read it before opening a new issue about your will.")
                (lsp-ui-peek-header :background ,bg3 :foreground ,fg3, :weight bold)
                (lsp-ui-peek-footer :inherit lsp-ui-peek-header)
                (lsp-ui-peek-selection :background ,bg4 :foreground ,fg4)
+               (lsp-ui-sideline-symbol :foreground ,fg4 :box (:line-width -1 :color ,fg4) :height 0.99)
+               (lsp-ui-sideline-current-symbol :foreground ,dracula-fg :weight ultra-bold
+                                               :box (:line-width -1 :color dracula-fg) :height 0.99)
+               (lsp-ui-sideline-code-action :foreground ,dracula-yellow)
+               (lsp-ui-sideline-symbol-info :slant italic :height 0.99)
+               (lsp-ui-doc-background :background ,dracula-bg)
+               (lsp-ui-doc-header :foreground ,dracula-bg :background ,dracula-cyan)
                ;; magit
                (magit-branch-local :foreground ,dracula-cyan)
                (magit-branch-remote :foreground ,dracula-green)
