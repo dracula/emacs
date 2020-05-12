@@ -469,6 +469,10 @@ read it before opening a new issue about your will.")
                (mu4e-cited-3-face :foreground ,dracula-comment)
                (mu4e-cited-4-face :foreground ,fg2)
                (mu4e-cited-5-face :foreground ,fg3)
+               ;; neo-tree
+               (neo-file-link-face :foreground ,fg1)
+               (neo-root-dir-face :bold t :foreground ,dracula-purple)
+               (neo-dir-link-face :foreground ,dracula-purple)
                ;; org
                (org-agenda-date :foreground ,dracula-cyan :underline nil)
                (org-agenda-dimmed-todo-face :foreground ,dracula-comment)
