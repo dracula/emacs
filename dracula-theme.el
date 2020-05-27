@@ -454,8 +454,16 @@ read it before opening a new issue about your will.")
                (markdown-pre-face :foreground ,dracula-orange)
                (markdown-table-face :foreground ,dracula-purple)
                ;; message
+               (message-header-to :foreground ,dracula-fg :weight bold)
+               (message-header-cc :foreground ,dracula-fg :bold bold)
+               (message-header-subject :foreground ,dracula-orange)
+               (message-header-newsgroups :foreground ,dracula-purple)
+               (message-header-other :foreground ,dracula-purple)
+               (message-header-name :foreground ,dracula-green)
+               (message-header-xheader :foreground ,dracula-cyan)
+               (message-separator :foreground ,dracula-cyan :slant italic)
+               (message-cited-text :foreground ,dracula-comment)
                (message-mml :foreground ,dracula-green :weight normal)
-               (message-header-xheader :foreground ,dracula-cyan :weight normal)
                ;; mode-line
                (mode-line :background ,dracula-current
                           :box ,dracula-current :inverse-video nil
