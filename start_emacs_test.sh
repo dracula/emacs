@@ -1,21 +1,23 @@
 #!/usr/bin/env sh
 
 ARGS=
-TERM_TEST=no
-COLOR=256color
+COLOR=
 
 for arg in $*; do
     case $arg in
-	256) COLOR=256color ;;
-	88) COLOR=88color ;;
-	16) COLOR=16color ;;
-	*)
-        [ "$arg" = '-nw' ] && TERM_TEST=yes
-        ARGS="$ARGS $arg"
-        ;;
+	    256|-nw) COLOR=256color ;;
+	    88) COLOR=88color ;;
+	    16) COLOR=16color ;;
+	    *) ARGS="$ARGS $arg" ;;
     esac
 done
 
-[ "$TERM_TEST" = 'yes' ] && export TERM=xterm-$COLOR
 [ -z "$EMACS" ] && EMACS=emacs
+if [ -n "$COLOR" ]; then
+    export TERM=xterm-$COLOR
+    echo "Run in terminal as $TERM"
+    EMACS="$EMACS -nw"
+else
+    echo "Run as a graphical window"
+fi
 $EMACS -Q --debug-init -l test-profile.el $ARGS
