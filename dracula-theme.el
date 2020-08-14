@@ -476,7 +476,11 @@ read it before opening a new issue about your will.")
                (message-header-name :foreground ,dracula-green)
                (message-header-xheader :foreground ,dracula-cyan)
                (message-separator :foreground ,dracula-cyan :slant italic)
-               (message-cited-text :foreground ,dracula-comment)
+               (message-cited-text :foreground ,dracula-purple)
+               (message-cited-text-1 :foreground ,dracula-purple)
+               (message-cited-text-2 :foreground ,dracula-orange)
+               (message-cited-text-3 :foreground ,dracula-comment)
+               (message-cited-text-4 :foreground ,fg2)
                (message-mml :foreground ,dracula-green :weight normal)
                ;; mode-line
                (mode-line :background ,dracula-current
