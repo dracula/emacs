@@ -548,6 +548,7 @@ read it before opening a new issue about your will.")
                 ,@(if dracula-alternate-mode-line-and-minibuffer
                       (list :foreground dracula-comment :box dracula-bg)
                     (list :foreground fg4 :box bg2)))
+               (mini-modeline-mode-line :inherit mode-line :height 0.1 :box nil)
                ;; mu4e
                (mu4e-unread-face :foreground ,dracula-pink :weight normal)
                (mu4e-view-url-number-face :foreground ,dracula-purple)
@@ -644,6 +645,8 @@ read it before opening a new issue about your will.")
                (outline-4 :foreground ,dracula-yellow)
                (outline-5 :foreground ,dracula-cyan)
                (outline-6 :foreground ,dracula-orange)
+               ;; perspective
+               (persp-selected-face :weight bold :foreground ,dracula-pink)
                ;; powerline
                (powerline-active1 :background ,dracula-bg :foreground ,dracula-pink)
                (powerline-active2 :background ,dracula-bg :foreground ,dracula-pink)
