@@ -702,7 +702,11 @@ read it before opening a new issue about your will.")
                (whitespace-trailing :inherit trailing-whitespace)
                ;; yard-mode
                (yard-tag-face :inherit ,font-lock-builtin-face)
-               (yard-directive-face :inherit ,font-lock-builtin-face))))
+               (yard-directive-face :inherit ,font-lock-builtin-face)
+               ;;selectrum-mode
+               (selectrum-current-candidate :foreground ,dracula-pink)
+               (selectrum-primary-highlight :foreground ,dracula-orange)
+               (selectrum-secondary-highlight :foreground ,dracula-green))))
 
   (apply #'custom-theme-set-faces
          'dracula
