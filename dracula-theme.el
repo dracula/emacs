@@ -619,6 +619,10 @@ read it before opening a new issue about your will.")
                (rpm-spec-section-face :foreground ,dracula-yellow)
                (rpm-spec-tag-face :foreground ,dracula-cyan)
                (rpm-spec-var-face :foreground ,dracula-orange)
+               ;; selectrum-mode
+               (selectrum-current-candidate :foreground ,dracula-pink)
+               (selectrum-primary-highlight :foreground ,dracula-orange)
+               (selectrum-secondary-highlight :foreground ,dracula-green)
                ;; show-paren
                (show-paren-match-face :background unspecified
                                       :foreground ,dracula-cyan
