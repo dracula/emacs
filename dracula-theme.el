@@ -643,6 +643,10 @@ read it before opening a new issue about your will.")
                (speedbar-separator-face :background ,dracula-bg
                                         :foreground ,dracula-fg
                                         :weight bold)
+               ;;selectrum-mode
+               (selectrum-current-candidate :foreground ,dracula-pink)
+               (selectrum-primary-highlight :foreground ,dracula-orange)
+               (selectrum-secondary-highlight :foreground ,dracula-green)
                ;; tab-bar & tab-line (since Emacs 27.1)
                (tab-bar :foreground ,dracula-purple :background ,dracula-current
                         :inherit variable-pitch)
@@ -702,11 +706,7 @@ read it before opening a new issue about your will.")
                (whitespace-trailing :inherit trailing-whitespace)
                ;; yard-mode
                (yard-tag-face :inherit ,font-lock-builtin-face)
-               (yard-directive-face :inherit ,font-lock-builtin-face)
-               ;;selectrum-mode
-               (selectrum-current-candidate :foreground ,dracula-pink)
-               (selectrum-primary-highlight :foreground ,dracula-orange)
-               (selectrum-secondary-highlight :foreground ,dracula-green))))
+               (yard-directive-face :inherit ,font-lock-builtin-face))))
 
   (apply #'custom-theme-set-faces
          'dracula
