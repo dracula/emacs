@@ -442,7 +442,7 @@ read it before opening a new issue about your will.")
                (magit-process-ng :foreground ,dracula-orange :weight bold)
                (magit-process-ok :foreground ,dracula-green :weight bold)
                ;; markdown
-               (markdown-blockquote-face :foreground ,dracula-orange)
+               (markdown-blockquote-face :foreground ,dracula-purple)
                (markdown-code-face :foreground ,dracula-orange)
                (markdown-footnote-face :foreground ,other-blue)
                (markdown-header-face :weight normal)
