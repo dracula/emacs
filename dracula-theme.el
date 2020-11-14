@@ -220,6 +220,19 @@ read it before opening a new issue about your will.")
                (elfeed-log-warn-level-face :foreground ,dracula-orange)
                (elfeed-log-info-level-face :foreground ,dracula-cyan)
                (elfeed-log-debug-level-face :foreground ,dracula-comment)
+               ;; elpher
+               (elpher-gemini-heading1 :inherit bold :foreground ,dracula-pink
+                                       ,@(when dracula-enlarge-headings
+                                           (list :height dracula-height-title-1)))
+               (elpher-gemini-heading2 :inherit bold :foreground ,dracula-purple
+                                       ,@(when dracula-enlarge-headings
+                                           (list :height dracula-height-title-2)))
+               (elpher-gemini-heading3 :weight normal :foreground ,dracula-green
+                                       ,@(when dracula-enlarge-headings
+                                           (list :height dracula-height-title-3)))
+
+               (elpher-gemini-preformatted :inherit fixed-pitch
+                                           :foreground ,dracula-orange)
                ;; enh-ruby
                (enh-ruby-heredoc-delimiter-face :foreground ,dracula-yellow)
                (enh-ruby-op-face :foreground ,dracula-pink)
@@ -234,6 +247,18 @@ read it before opening a new issue about your will.")
                (font-latex-match-reference-keywords :foreground ,dracula-cyan)
                (font-latex-match-variable-keywords :foreground ,dracula-fg)
                (font-latex-string-face :foreground ,dracula-yellow)
+               ;; gemini
+               (gemini-heading-face-1 :inherit bold :foreground ,dracula-pink
+                                      ,@(when dracula-enlarge-headings
+                                          (list :height dracula-height-title-1)))
+               (gemini-heading-face-2 :inherit bold :foreground ,dracula-purple
+                                      ,@(when dracula-enlarge-headings
+                                          (list :height dracula-height-title-2)))
+               (gemini-heading-face-3 :weight normal :foreground ,dracula-green
+                                      ,@(when dracula-enlarge-headings
+                                          (list :height dracula-height-title-3)))
+               (gemini-heading-face-rest :weight normal :foreground ,dracula-yellow)
+               (gemini-quote-face :foreground ,dracula-purple)
                ;; gnus-group
                (gnus-group-mail-1 :foreground ,dracula-pink :weight bold)
                (gnus-group-mail-1-empty :inherit gnus-group-mail-1 :weight normal)
