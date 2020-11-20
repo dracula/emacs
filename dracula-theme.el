@@ -230,7 +230,6 @@ read it before opening a new issue about your will.")
                (elpher-gemini-heading3 :weight normal :foreground ,dracula-green
                                        ,@(when dracula-enlarge-headings
                                            (list :height dracula-height-title-3)))
-
                (elpher-gemini-preformatted :inherit fixed-pitch
                                            :foreground ,dracula-orange)
                ;; enh-ruby
