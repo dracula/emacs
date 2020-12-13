@@ -786,8 +786,24 @@ read it before opening a new issue about your will.")
                       (t                       ; should be only tty-like envs
                        ,(funcall expand-with-func 'cadddr spec))))
                    whole-theme))
-           whole-theme)))
+           whole-theme))
 
+  (apply #'custom-theme-set-variables
+         'dracula
+         (let ((get-func
+                (pcase (display-color-cells)
+                  ((pred (<= 16777216)) 'car) ; fully graphical envs
+                  ((pred (<= 256)) 'cadr)     ; terminal withs 256 colors
+                  (_ 'caddr))))               ; should be only tty-like envs
+           `((ansi-color-names-vector
+              [,(funcall get-func (alist-get 'dracula-bg colors))
+               ,(funcall get-func (alist-get 'dracula-red colors))
+               ,(funcall get-func (alist-get 'dracula-green colors))
+               ,(funcall get-func (alist-get 'dracula-yellow colors))
+               ,(funcall get-func (alist-get 'dracula-comment colors))
+               ,(funcall get-func (alist-get 'dracula-purple colors))
+               ,(funcall get-func (alist-get 'dracula-cyan colors))
+               ,(funcall get-func (alist-get 'dracula-fg colors))])))))
 
 
 ;;;###autoload
