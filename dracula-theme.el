@@ -691,7 +691,7 @@ read it before opening a new issue about your will.")
                (tab-line-tab-current :inherit tab-line-tab)
                (tab-line-close-highlight :foreground ,dracula-red)
                ;; term
-               (term :foreground ,dracula-fg :background ,dracula-bg)
+               (term :foreground ,dracula-fg :background ,dracula-comment)
                (term-color-black :foreground ,dracula-bg :background ,dracula-bg)
                (term-color-blue :foreground ,dracula-purple :background ,dracula-purple)
                (term-color-cyan :foreground ,dracula-cyan :background ,dracula-cyan)
