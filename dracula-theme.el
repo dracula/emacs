@@ -99,7 +99,6 @@ read it before opening a new issue about your will.")
                 (other-blue      "#0189cc" "#0087ff" "brightblue")))
       (faces '(;; default
                (cursor :background ,fg3)
-               (completions-first-difference :foreground ,dracula-pink :weight bold)
                (default :background ,dracula-bg :foreground ,dracula-fg)
                (default-italic :slant italic)
                (ffap :foreground ,fg4)
@@ -165,6 +164,10 @@ read it before opening a new issue about your will.")
                ;;(company-tooltip-common-selection :inherit company-tooltip-common)
                (company-tooltip-annotation :foreground ,dracula-cyan)
                ;;(company-tooltip-annotation-selection :inherit company-tooltip-annotation)
+               ;; completions (minibuffer.el)
+               (completions-annotations :inherit font-lock-comment-face)
+               (completions-common-part :foreground ,dracula-green)
+               (completions-first-difference :inherit warning)
                ;; diff-hl
                (diff-hl-change :foreground ,dracula-orange :background ,dracula-orange)
                (diff-hl-delete :foreground ,dracula-red :background ,dracula-red)
@@ -383,6 +386,27 @@ read it before opening a new issue about your will.")
                (ido-virtual :foreground ,dracula-cyan)
                (ido-incomplete-regexp :inherit font-lock-warning-face)
                (ido-indicator :foreground ,dracula-fg :background ,dracula-pink)
+               ;; ivy
+               (ivy-current-match
+                ,@(if dracula-alternate-mode-line-and-minibuffer
+                      (list :weight 'normal :foreground dracula-green)
+                    (list :weight 'bold :foreground dracula-pink)))
+               ;; Highlights the background of the match.
+               (ivy-minibuffer-match-face-1 :background ,dracula-current)
+               ;; Highlights the first matched group.
+               (ivy-minibuffer-match-face-2 :background ,dracula-green
+                                            :foreground ,dracula-bg)
+               ;; Highlights the second matched group.
+               (ivy-minibuffer-match-face-3 :background ,dracula-yellow
+                                            :foreground ,dracula-bg)
+               ;; Highlights the third matched group.
+               (ivy-minibuffer-match-face-4 :background ,dracula-pink
+                                            :foreground ,dracula-bg)
+               (ivy-confirm-face :foreground ,dracula-orange)
+               (ivy-match-required-face :foreground ,dracula-red)
+               (ivy-subdir :foreground ,dracula-yellow)
+               (ivy-remote :foreground ,dracula-pink)
+               (ivy-virtual :foreground ,dracula-cyan)
                ;; isearch
                (isearch :inherit match :weight bold)
                (isearch-fail :foreground ,dracula-bg :background ,dracula-orange)
@@ -648,8 +672,8 @@ read it before opening a new issue about your will.")
                (rpm-spec-tag-face :foreground ,dracula-cyan)
                (rpm-spec-var-face :foreground ,dracula-orange)
                ;; selectrum-mode
-               (selectrum-current-candidate :foreground ,dracula-pink)
-               (selectrum-primary-highlight :foreground ,dracula-orange)
+               (selectrum-current-candidate :weight bold)
+               (selectrum-primary-highlight :foreground ,dracula-pink)
                (selectrum-secondary-highlight :foreground ,dracula-green)
                ;; show-paren
                (show-paren-match-face :background unspecified
