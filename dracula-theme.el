@@ -167,7 +167,7 @@ read it before opening a new issue about your will.")
                ;; completions (minibuffer.el)
                (completions-annotations :inherit font-lock-comment-face)
                (completions-common-part :foreground ,dracula-green)
-               (completions-first-difference :inherit warning)
+               (completions-first-difference :foreground ,dracula-pink :weight bold)
                ;; diff-hl
                (diff-hl-change :foreground ,dracula-orange :background ,dracula-orange)
                (diff-hl-delete :foreground ,dracula-red :background ,dracula-red)
