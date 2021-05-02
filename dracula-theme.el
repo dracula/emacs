@@ -744,6 +744,11 @@ read it before opening a new issue about your will.")
                (web-mode-warning-face :inherit font-lock-warning-face)
                ;; which-func
                (which-func :inherit font-lock-function-name-face)
+               ;; which-key
+               (which-key-key-face :inherit font-lock-builtin-face)
+               (which-key-command-description-face :inherit default)
+               (which-key-separator-face :inherit font-lock-comment-delimiter-face)
+               (which-key-local-map-description-face :foreground ,dracula-green)
                ;; whitespace
                (whitespace-big-indent :background ,dracula-red :foreground ,dracula-red)
                (whitespace-empty :background ,dracula-orange :foreground ,dracula-red)
