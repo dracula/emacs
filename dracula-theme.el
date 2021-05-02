@@ -386,6 +386,27 @@ read it before opening a new issue about your will.")
                (ido-virtual :foreground ,dracula-cyan)
                (ido-incomplete-regexp :inherit font-lock-warning-face)
                (ido-indicator :foreground ,dracula-fg :background ,dracula-pink)
+               ;; ivy
+               (ivy-current-match
+                ,@(if dracula-alternate-mode-line-and-minibuffer
+                      (list :weight 'normal :foreground dracula-green)
+                    (list :weight 'bold :foreground dracula-pink)))
+               ;; Highlights the background of the match.
+               (ivy-minibuffer-match-face-1 :background ,dracula-current)
+               ;; Highlights the first matched group.
+               (ivy-minibuffer-match-face-2 :background ,dracula-green
+                                            :foreground ,dracula-bg)
+               ;; Highlights the second matched group.
+               (ivy-minibuffer-match-face-3 :background ,dracula-yellow
+                                            :foreground ,dracula-bg)
+               ;; Highlights the third matched group.
+               (ivy-minibuffer-match-face-4 :background ,dracula-pink
+                                            :foreground ,dracula-bg)
+               (ivy-confirm-face :foreground ,dracula-orange)
+               (ivy-match-required-face :foreground ,dracula-red)
+               (ivy-subdir :foreground ,dracula-yellow)
+               (ivy-remote :foreground ,dracula-pink)
+               (ivy-virtual :foreground ,dracula-cyan)
                ;; isearch
                (isearch :inherit match :weight bold)
                (isearch-fail :foreground ,dracula-bg :background ,dracula-orange)
