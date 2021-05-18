@@ -14,7 +14,6 @@
 ;; A dark color theme available for a number of editors.
 
 ;;; Code:
-(require 'cl-lib)
 (deftheme dracula)
 
 
@@ -767,25 +766,28 @@ read it before opening a new issue about your will.")
 
   (apply #'custom-theme-set-faces
          'dracula
-         (let ((color-names (mapcar #'car colors))
-               (graphic-colors (mapcar #'cadr colors))
-               (term-colors (mapcar #'caddr colors))
-               (tty-colors (mapcar #'cadddr colors))
-               (expand-for-kind
-                (lambda (kind spec)
-                  (when (and (eq kind 'term-colors)
+         (let ((expand-with-func
+                (lambda (func spec)
+                  (when (and (eq func 'caddr)
                              dracula-use-24-bit-colors-on-256-colors-terms)
-                    (setq kind 'graphic-colors))
-                  (cl-progv color-names (symbol-value kind)
-                    (eval `(backquote ,spec))))))
-           (cl-loop for (face . spec) in faces
-                    collect `(,face
-                              ((((min-colors 16777216)) ; fully graphical envs
-                                ,(funcall expand-for-kind 'graphic-colors spec))
-                               (((min-colors 256))      ; terminal withs 256 colors
-                                ,(funcall expand-for-kind 'term-colors spec))
-                               (t                       ; should be only tty-like envs
-                                ,(funcall expand-for-kind 'tty-colors spec))))))))
+                    (setq func 'cadr))
+                  (let (reduced-color-list)
+                    (eval `(let ,(dolist (col colors reduced-color-list)
+                                   (push `(,(car col) ,(funcall func col))
+                                         reduced-color-list))
+                             (eval `(backquote ,spec)))))))
+               whole-theme)
+           (pcase-dolist (`(,face . ,spec) faces)
+             (push `(,face
+                     ((((min-colors 16777216)) ; fully graphical envs
+                       ,(funcall expand-with-func 'cadr spec))
+                      (((min-colors 256))      ; terminal withs 256 colors
+                       ,(funcall expand-with-func 'caddr spec))
+                      (t                       ; should be only tty-like envs
+                       ,(funcall expand-with-func 'cadddr spec))))
+                   whole-theme))
+           whole-theme)))
+
 
 
 ;;;###autoload
