@@ -4,6 +4,7 @@
 ;;
 ;; Code licensed under the MIT license
 
+;; Maintainer: Étienne Deparis <etienne@depar.is>
 ;; Author: film42
 ;; Version: 1.7.0
 ;; Package-Requires: ((emacs "24.3"))
@@ -814,7 +815,6 @@ read it before opening a new issue about your will.")
 (provide-theme 'dracula)
 
 ;; Local Variables:
-;; no-byte-compile: t
 ;; indent-tabs-mode: nil
 ;; End:
 
