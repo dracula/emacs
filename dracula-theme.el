@@ -769,21 +769,21 @@ read it before opening a new issue about your will.")
          'dracula
          (let ((expand-with-func
                 (lambda (func spec)
-                  (when (and (eq func 'caddr)
-                             dracula-use-24-bit-colors-on-256-colors-terms)
-                    (setq func 'cadr))
                   (let (reduced-color-list)
-                    (eval `(let ,(dolist (col colors reduced-color-list)
-                                   (push `(,(car col) ,(funcall func col))
-                                         reduced-color-list))
-                             (eval `(backquote ,spec)))))))
+                    (dolist (col colors reduced-color-list)
+                      (push (list (car col) (funcall func col))
+                            reduced-color-list))
+                    (eval `(let ,reduced-color-list
+                             (backquote ,spec))))))
                whole-theme)
            (pcase-dolist (`(,face . ,spec) faces)
              (push `(,face
                      ((((min-colors 16777216)) ; fully graphical envs
                        ,(funcall expand-with-func 'cadr spec))
                       (((min-colors 256))      ; terminal withs 256 colors
-                       ,(funcall expand-with-func 'caddr spec))
+                       ,(if dracula-use-24-bit-colors-on-256-colors-terms
+                            (funcall expand-with-func 'cadr spec)
+                          (funcall expand-with-func 'caddr spec)))
                       (t                       ; should be only tty-like envs
                        ,(funcall expand-with-func 'cadddr spec))))
                    whole-theme))
