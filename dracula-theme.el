@@ -535,13 +535,13 @@ read it before opening a new issue about your will.")
                           :box ,dracula-current :inverse-video nil
                           ,@(if dracula-alternate-mode-line-and-minibuffer
                                 (list :foreground fg3)
-                              (list :foreground "unspecified-fg")))
+                              (list :foreground dracula-fg)))
                (mode-line-inactive
                 :inverse-video nil
                 ,@(if dracula-alternate-mode-line-and-minibuffer
                       (list :foreground dracula-comment :background dracula-bg
                             :box dracula-bg)
-                    (list :foreground dracula-fg :background bg2 :box bg2)))
+                    (list :foreground "unspecified-fg" :background bg2 :box bg2)))
                ;; mu4e
                (mu4e-unread-face :foreground ,dracula-pink :weight normal)
                (mu4e-view-url-number-face :foreground ,dracula-purple)
