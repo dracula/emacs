@@ -7,6 +7,7 @@
 ## Install
 
 ![Melpa badge](https://melpa.org/packages/dracula-theme-badge.svg)
+![NonGNU elpa badge](https://elpa.nongnu.org/nongnu/dracula-theme.svg)
 
 All instructions can be found at
 [draculatheme.com/emacs](https://draculatheme.com/emacs).
