@@ -764,6 +764,12 @@ read it before opening a new issue about your will.")
                ;; yard-mode
                (yard-tag-face :inherit font-lock-builtin-face)
                (yard-directive-face :inherit font-lock-builtin-face))))
+               ;; go-test
+               (go-test--ok-face :inherit success)
+               (go-test--error-face :inherit error)
+               (go-test--warning-face :inherit warning)
+               (go-test--pointer-face :foreground ,dracula-pink)
+               (go-test--standard-face :foreground ,dracula-cyan))))
 
   (apply #'custom-theme-set-faces
          'dracula
