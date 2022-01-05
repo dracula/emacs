@@ -262,6 +262,12 @@ read it before opening a new issue about your will.")
                                           (list :height dracula-height-title-3)))
                (gemini-heading-face-rest :weight normal :foreground ,dracula-yellow)
                (gemini-quote-face :foreground ,dracula-purple)
+               ;; go-test
+               (go-test--ok-face :inherit success)
+               (go-test--error-face :inherit error)
+               (go-test--warning-face :inherit warning)
+               (go-test--pointer-face :foreground ,dracula-pink)
+               (go-test--standard-face :foreground ,dracula-cyan)
                ;; gnus-group
                (gnus-group-mail-1 :foreground ,dracula-pink :weight bold)
                (gnus-group-mail-1-empty :inherit gnus-group-mail-1 :weight normal)
@@ -764,12 +770,6 @@ read it before opening a new issue about your will.")
                ;; yard-mode
                (yard-tag-face :inherit font-lock-builtin-face)
                (yard-directive-face :inherit font-lock-builtin-face))))
-               ;; go-test
-               (go-test--ok-face :inherit success)
-               (go-test--error-face :inherit error)
-               (go-test--warning-face :inherit warning)
-               (go-test--pointer-face :foreground ,dracula-pink)
-               (go-test--standard-face :foreground ,dracula-cyan))))
 
   (apply #'custom-theme-set-faces
          'dracula
