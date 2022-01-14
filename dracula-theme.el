@@ -396,8 +396,8 @@ read it before opening a new issue about your will.")
                ;; ivy
                (ivy-current-match
                 ,@(if dracula-alternate-mode-line-and-minibuffer
-                      (list :weight 'normal :foreground dracula-green)
-                    (list :weight 'bold :foreground dracula-pink)))
+                      (list :weight 'normal :background dracula-current :foreground dracula-green)
+                    (list :weight 'bold :background dracula-current :foreground dracula-pink)))
                ;; Highlights the background of the match.
                (ivy-minibuffer-match-face-1 :background ,dracula-current)
                ;; Highlights the first matched group.
