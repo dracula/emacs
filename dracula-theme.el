@@ -732,6 +732,10 @@ read it before opening a new issue about your will.")
                                       :box (:line-width 2 :color ,bg2 :style nil))
                (tab-line-tab-current :inherit tab-line-tab)
                (tab-line-close-highlight :foreground ,dracula-red)
+               ;; telephone-line
+               (telephone-line-accent-active :background ,dracula-bg :foreground ,dracula-pink)
+               (telephone-line-accent-inactive :background ,bg2 :foreground ,dracula-purple)
+               (telephone-line-unimportant :background ,dracula-bg :foreground ,dracula-comment)
                ;; term
                (term :foreground ,dracula-fg :background ,dracula-bg)
                (term-color-black :foreground ,dracula-bg :background ,dracula-comment)
