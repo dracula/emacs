@@ -13,6 +13,8 @@
 ;;; Commentary:
 
 ;; A dark color theme available for a number of editors.
+;; This theme tries as much as possible to follow the consensual
+;; specification (see URL `https://spec.draculatheme.com/').
 
 ;;; Code:
 (deftheme dracula)
@@ -127,22 +129,22 @@ read it before opening a new issue about your will.")
                (vertical-border :foreground ,bg2)
                (warning :foreground ,dracula-orange)
                ;; syntax / font-lock
-               (font-lock-builtin-face :foreground ,dracula-orange)
+               (font-lock-builtin-face :foreground ,dracula-cyan :slant italic)
                (font-lock-comment-face :inherit shadow)
                (font-lock-comment-delimiter-face :inherit shadow)
-               (font-lock-constant-face :foreground ,dracula-cyan)
+               (font-lock-constant-face :foreground ,dracula-purple)
                (font-lock-doc-face :foreground ,dracula-comment)
                (font-lock-function-name-face :foreground ,dracula-green :weight bold)
                (font-lock-keyword-face :foreground ,dracula-pink :weight bold)
                (font-lock-negation-char-face :foreground ,dracula-cyan)
                (font-lock-preprocessor-face :foreground ,dracula-orange)
-               (font-lock-reference-face :foreground ,dracula-cyan)
+               (font-lock-reference-face :inherit font-lock-constant-face) ;; obsolete
                (font-lock-regexp-grouping-backslash :foreground ,dracula-cyan)
                (font-lock-regexp-grouping-construct :foreground ,dracula-purple)
                (font-lock-string-face :foreground ,dracula-yellow)
-               (font-lock-type-face :foreground ,dracula-purple)
+               (font-lock-type-face :inherit font-lock-builtin-face)
                (font-lock-variable-name-face :foreground ,dracula-fg :weight bold)
-               (font-lock-warning-face :foreground ,dracula-orange :background ,bg2)
+               (font-lock-warning-face :inherit warning :background ,bg2)
                ;; auto-complete
                (ac-completion-face :underline t :foreground ,dracula-pink)
                ;; company
@@ -751,6 +753,32 @@ read it before opening a new issue about your will.")
                (term-color-red :foreground ,dracula-red :background ,dracula-red)
                (term-color-white :foreground ,dracula-fg :background ,dracula-fg)
                (term-color-yellow :foreground ,dracula-yellow :background ,dracula-yellow)
+               ;; tree-sitter
+               (tree-sitter-hl-face:attribute :inherit font-lock-constant-face)
+               (tree-sitter-hl-face:comment :inherit font-lock-comment-face)
+               (tree-sitter-hl-face:constant :inherit font-lock-constant-face)
+               (tree-sitter-hl-face:constant.builtin :inherit font-lock-builtin-face)
+               (tree-sitter-hl-face:constructor :inherit font-lock-constant-face)
+               (tree-sitter-hl-face:escape :foreground ,dracula-pink)
+               (tree-sitter-hl-face:function :inherit font-lock-function-name-face)
+               (tree-sitter-hl-face:function.builtin :inherit font-lock-builtin-face)
+               (tree-sitter-hl-face:function.call :inherit font-lock-function-name-face
+                                                  :weight normal)
+               (tree-sitter-hl-face:function.macro :inherit font-lock-preprocessor-face)
+               (tree-sitter-hl-face:function.special :inherit font-lock-preprocessor-face)
+               (tree-sitter-hl-face:keyword :inherit font-lock-keyword-face)
+               (tree-sitter-hl-face:punctuation :foreground ,dracula-pink)
+               (tree-sitter-hl-face:punctuation.bracket :foreground ,dracula-fg)
+               (tree-sitter-hl-face:punctuation.delimiter :foreground ,dracula-fg)
+               (tree-sitter-hl-face:punctuation.special :foreground ,dracula-pink)
+               (tree-sitter-hl-face:string :inherit font-lock-string-face)
+               (tree-sitter-hl-face:string.special :foreground ,dracula-red)
+               (tree-sitter-hl-face:tag :inherit font-lock-keyword-face)
+               (tree-sitter-hl-face:type :inherit font-lock-type-face)
+               (tree-sitter-hl-face:type.parameter :foreground ,dracula-pink)
+               (tree-sitter-hl-face:variable :inherit font-lock-variable-name-face)
+               (tree-sitter-hl-face:variable.parameter :inherit tree-sitter-hl-face:variable
+                                                       :weight normal)
                ;; undo-tree
                (undo-tree-visualizer-current-face :foreground ,dracula-orange)
                (undo-tree-visualizer-default-face :foreground ,fg2)
