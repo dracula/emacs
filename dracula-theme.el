@@ -116,6 +116,10 @@ read it before opening a new issue about your will.")
                (linum :slant italic :foreground ,bg4 :background ,dracula-bg)
                (line-number :slant italic :foreground ,bg4 :background ,dracula-bg)
                (match :background ,dracula-yellow :foreground ,dracula-bg)
+               (menu :background ,dracula-current :inverse-video nil
+                     ,@(if dracula-alternate-mode-line-and-minibuffer
+                           (list :foreground fg3)
+                         (list :foreground dracula-fg)))
                (minibuffer-prompt
                 ,@(if dracula-alternate-mode-line-and-minibuffer
                       (list :weight 'normal :foreground dracula-fg)
