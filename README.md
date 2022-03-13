@@ -14,9 +14,9 @@ All instructions can be found at
 
 ## Configure
 
-Some aspects of this theme are customizable.  You can change them either
+Some aspects of this theme are customizable. You can change them either
 by doing `M-x customize-group dracula` or setting one or more of the
-following values in your Emacs init file.  Note that these variables
+following values in your Emacs init file. Note that these variables
 need to be set before `load-theme` is invoked for Dracula.
 
 ```
@@ -61,9 +61,15 @@ This script requires the xterm terminfo files.
 This theme is maintained by the following person(s) and a bunch of
 [awesome contributors](https://github.com/dracula/emacs/graphs/contributors).
 
-[![Garrett T](https://avatars3.githubusercontent.com/u/1043908?v=3&s=70)](https://github.com/film42) | [![Étienne D](https://avatars3.githubusercontent.com/u/349239?v=3&s=70)](https://github.com/milouse) |
---- | --- |
-[Garrett T](https://github.com/film42) | [Étienne D](https://github.com/milouse) |
+| [![Garrett T](https://avatars3.githubusercontent.com/u/1043908?v=3&s=70)](https://github.com/film42) | [![Étienne D](https://avatars3.githubusercontent.com/u/349239?v=3&s=70)](https://github.com/milouse) |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| [Garrett T](https://github.com/film42)                                                               | [Étienne D](https://github.com/milouse)                                                              |
+
+## Community
+
+- [Twitter](https://twitter.com/draculatheme) - Best for getting updates about themes and new stuff.
+- [GitHub](https://github.com/dracula/dracula-theme/discussions) - Best for asking questions and discussing issues.
+- [Discord](https://draculatheme.com/discord-invite) - Best for hanging out with the community.
 
 ## License
 
