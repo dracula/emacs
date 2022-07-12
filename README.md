@@ -27,10 +27,10 @@ need to be set before `load-theme` is invoked for Dracula.
 (setq dracula-height-title-1 1.25)
 
 ;; Adjust font size of titles level 2 (default 1.1)
-(setq dracula-height-title-1 1.15)
+(setq dracula-height-title-2 1.15)
 
 ;; Adjust font size of titles level 3 (default 1.0)
-(setq dracula-height-title-1 1.05)
+(setq dracula-height-title-3 1.05)
 
 ;; Adjust font size of document titles (default 1.44)
 (setq dracula-height-doc-title 1.4)
