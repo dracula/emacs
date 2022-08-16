@@ -561,6 +561,9 @@ read it before opening a new issue about your will.")
                       (list :foreground dracula-comment :box dracula-bg)
                     (list :foreground fg4 :box bg2)))
                (mini-modeline-mode-line :inherit mode-line :height 0.1 :box nil)
+               ;; header-line
+               (header-line :inherit 'mode-line)
+               (header-line-highlight :inherit 'mode-line-highlight)
                ;; mu4e
                (mu4e-unread-face :foreground ,dracula-pink :weight normal)
                (mu4e-view-url-number-face :foreground ,dracula-purple)
