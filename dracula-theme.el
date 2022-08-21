@@ -560,6 +560,7 @@ read it before opening a new issue about your will.")
                 ,@(if dracula-alternate-mode-line-and-minibuffer
                       (list :foreground dracula-comment :box dracula-bg)
                     (list :foreground fg4 :box bg2)))
+               ;; mini-modeline
                (mini-modeline-mode-line :inherit mode-line :height 0.1 :box nil)
                ;; mu4e
                (mu4e-unread-face :foreground ,dracula-pink :weight normal)
