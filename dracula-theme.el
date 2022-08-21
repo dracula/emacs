@@ -124,6 +124,16 @@ read it before opening a new issue about your will.")
                 ,@(if dracula-alternate-mode-line-and-minibuffer
                       (list :weight 'normal :foreground dracula-fg)
                     (list :weight 'bold :foreground dracula-pink)))
+               (mode-line :background ,dracula-current
+                          :box ,dracula-current :inverse-video nil
+                          ,@(if dracula-alternate-mode-line-and-minibuffer
+                                (list :foreground fg3)
+                              (list :foreground dracula-fg)))
+               (mode-line-inactive
+                :background ,dracula-bg :inverse-video nil
+                ,@(if dracula-alternate-mode-line-and-minibuffer
+                      (list :foreground dracula-comment :box dracula-bg)
+                    (list :foreground fg4 :box bg2)))
                (read-multiple-choice-face :inherit completions-first-difference)
                (region :inherit match :extend t)
                (shadow :foreground ,dracula-comment)
@@ -549,17 +559,6 @@ read it before opening a new issue about your will.")
                (message-cited-text-3 :foreground ,dracula-comment)
                (message-cited-text-4 :foreground ,fg2)
                (message-mml :foreground ,dracula-green :weight normal)
-               ;; mode-line
-               (mode-line :background ,dracula-current
-                          :box ,dracula-current :inverse-video nil
-                          ,@(if dracula-alternate-mode-line-and-minibuffer
-                                (list :foreground fg3)
-                              (list :foreground dracula-fg)))
-               (mode-line-inactive
-                :background ,dracula-bg :inverse-video nil
-                ,@(if dracula-alternate-mode-line-and-minibuffer
-                      (list :foreground dracula-comment :box dracula-bg)
-                    (list :foreground fg4 :box bg2)))
                ;; mini-modeline
                (mini-modeline-mode-line :inherit mode-line :height 0.1 :box nil)
                ;; mu4e
