@@ -151,6 +151,8 @@ read it before opening a new issue about your will.")
                (font-lock-function-name-face :foreground ,dracula-green :weight bold)
                (font-lock-keyword-face :foreground ,dracula-pink :weight bold)
                (font-lock-negation-char-face :foreground ,dracula-cyan)
+               (font-lock-number-face :foreground ,dracula-purple)
+               (font-lock-operator-face :foreground ,dracula-pink)
                (font-lock-preprocessor-face :foreground ,dracula-orange)
                (font-lock-reference-face :inherit font-lock-constant-face) ;; obsolete
                (font-lock-regexp-grouping-backslash :foreground ,dracula-cyan)
