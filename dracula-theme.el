@@ -161,6 +161,8 @@ read it before opening a new issue about your will.")
                (font-lock-warning-face :inherit warning :background ,bg2)
                ;; auto-complete
                (ac-completion-face :underline t :foreground ,dracula-pink)
+               ;; bookmarks
+               (bookmark-face :foreground ,dracula-pink)
                ;; company
                (company-echo-common :foreground ,dracula-bg :background ,dracula-fg)
                (company-preview :background ,dracula-current :foreground ,other-blue)
