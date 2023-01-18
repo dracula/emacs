@@ -228,6 +228,9 @@ read it before opening a new issue about your will.")
                (diredp-link-priv :foreground ,dracula-orange)
                (diredp-autofile-name :foreground ,dracula-yellow)
                (diredp-tagged-autofile-name :foreground ,dracula-yellow)
+               ;; eglot
+               (eglot-diagnostic-tag-unnecessary-face :inherit warning)
+               (eglot-diagnostic-tag-deprecated-face :inherit warning :strike-through t)
                ;; eldoc-box
                (eldoc-box-border :background ,dracula-current)
                (eldoc-box-body :background ,dracula-current)
