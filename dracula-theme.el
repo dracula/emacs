@@ -722,6 +722,13 @@ read it before opening a new issue about your will.")
                                  :weight bold)
                (show-paren-match-expression :inherit match)
                (show-paren-mismatch :inherit font-lock-warning-face)
+               ;; shr
+               (shr-h1 :foreground ,dracula-pink :weight bold :height 1.3)
+               (shr-h2 :foreground ,dracula-purple :weight bold)
+               (shr-h3 :foreground ,dracula-green :slant italic)
+               (shr-h4 :foreground ,dracula-yellow)
+               (shr-h5 :foreground ,dracula-cyan)
+               (shr-h6 :foreground ,dracula-orange)
                ;; slime
                (slime-repl-inputed-output-face :foreground ,dracula-purple)
                ;; spam
