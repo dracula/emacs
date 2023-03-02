@@ -97,7 +97,9 @@ read it before opening a new issue about your will.")
                 (fg2             "#e2e2dc" "#e4e4e4" "brightwhite")
                 (fg3             "#ccccc7" "#c6c6c6" "white")
                 (fg4             "#b6b6b2" "#b2b2b2" "white")
-                (dark-blue      "#0189cc" "#0087ff" "brightblue")))
+                (dark-red        "#880000" "#870000" "red") ; 40% darker
+                (dark-green      "#037a22" "#00af00" "green") ; 40% darker
+                (dark-blue       "#0189cc" "#0087ff" "brightblue")))
       (faces '(;; default / basic faces
                (cursor :background ,fg3)
                (default :background ,dracula-bg :foreground ,dracula-fg)
@@ -188,6 +190,18 @@ read it before opening a new issue about your will.")
                (completions-annotations :inherit font-lock-comment-face)
                (completions-common-part :foreground ,dracula-green)
                (completions-first-difference :foreground ,dracula-pink :weight bold)
+               ;; diff
+               (diff-added :background ,dark-green :foreground ,dracula-fg :extend t)
+               (diff-removed :background ,dark-red :foreground ,dracula-fg :extend t)
+               (diff-refine-added :background ,dracula-green
+                                  :foreground ,dracula-bg)
+               (diff-refine-removed :background ,dracula-red
+                                    :foreground ,dracula-fg)
+               (diff-indicator-added :foreground ,dracula-green)
+               (diff-indicator-removed :foreground ,dracula-red)
+               (diff-indicator-changed :foreground ,dracula-orange)
+               (diff-error :foreground ,dracula-red, :background ,dracula-bg
+                           :weight bold)
                ;; diff-hl
                (diff-hl-change :foreground ,dracula-orange :background ,dracula-orange)
                (diff-hl-delete :foreground ,dracula-red :background ,dracula-red)
@@ -229,6 +243,13 @@ read it before opening a new issue about your will.")
                (diredp-link-priv :foreground ,dracula-orange)
                (diredp-autofile-name :foreground ,dracula-yellow)
                (diredp-tagged-autofile-name :foreground ,dracula-yellow)
+               ;; ediff
+               (ediff-current-diff-A :background ,dark-red)
+               (ediff-fine-diff-A :background ,dracula-red :foreground ,dracula-fg)
+               (ediff-current-diff-B :background ,dark-green)
+               (ediff-fine-diff-B :background ,dracula-green :foreground ,dracula-bg)
+               (ediff-current-diff-C :background ,dark-blue)
+               (ediff-fine-diff-C :background ,dracula-cyan :foreground ,dracula-bg)
                ;; eglot
                (eglot-diagnostic-tag-unnecessary-face :inherit warning)
                (eglot-diagnostic-tag-deprecated-face :inherit warning :strike-through t)
