@@ -504,44 +504,60 @@ read it before opening a new issue about your will.")
                ;; magit
                (magit-branch-local :foreground ,dracula-cyan)
                (magit-branch-remote :foreground ,dracula-green)
+               (magit-refname :foreground ,dark-blue)
                (magit-tag :foreground ,dracula-orange)
+               (magit-hash :foreground ,dracula-comment)
+               (magit-dimmed :foreground ,dracula-comment)
                (magit-section-heading :foreground ,dracula-pink :weight bold)
                (magit-section-highlight :background ,dracula-current :extend t)
-               (magit-diff-context-highlight :background ,dracula-current
-                                             :foreground ,dracula-fg
-                                             :extend t)
+               (magit-diff-context :foreground ,fg3 :extend t)
+               (magit-diff-context-highlight :inherit magit-section-highlight
+                                             :foreground ,dracula-fg)
                (magit-diff-revision-summary :foreground ,dracula-orange
                                             :background ,dracula-bg
                                             :weight bold)
-               (magit-diff-revision-summary-highlight :foreground ,dracula-orange
-                                                      :background ,dracula-current
-                                                      :weight bold
-                                                      :extend t)
-               ;; the four following lines are just a patch of the
-               ;; upstream color to add the extend keyword.
-               (magit-diff-added :background "#335533"
-                                 :foreground "#ddffdd"
-                                 :extend t)
-               (magit-diff-added-highlight :background "#336633"
-                                           :foreground "#cceecc"
-                                           :extend t)
-               (magit-diff-removed :background "#553333"
-                                   :foreground "#ffdddd"
-                                   :extend t)
-               (magit-diff-removed-highlight :background "#663333"
-                                             :foreground "#eecccc"
-                                             :extend t)
+               (magit-diff-revision-summary-highlight :inherit magit-section-highlight
+                                                      :foreground ,dracula-orange
+                                                      :weight bold)
+               (magit-diff-added :background ,dracula-bg :foreground ,dracula-green)
+               (magit-diff-added-highlight :background ,dracula-current
+                                           :foreground ,dracula-green)
+               (magit-diff-removed :background ,dracula-bg :foreground ,dracula-red)
+               (magit-diff-removed-highlight :background ,dracula-current
+                                             :foreground ,dracula-red)
                (magit-diff-file-heading :foreground ,dracula-fg)
-               (magit-diff-file-heading-highlight :inherit magit-section-highlight)
+               (magit-diff-file-heading-highlight :inherit magit-section-highlight
+                                                  :weight bold)
+               (magit-diff-file-heading-selection
+                :inherit magit-diff-file-heading-highlight
+                :foreground ,dracula-pink)
+               (magit-diff-hunk-heading :inherit magit-diff-context
+                                        :background ,bg3)
+               (magit-diff-hunk-heading-highlight
+                :inherit magit-diff-context-highlight
+                :weight bold)
+               (magit-diff-hunk-heading-selection
+                :inherit magit-diff-hunk-heading-highlight
+                :foreground ,dracula-pink)
+               (magit-diff-lines-heading
+                :inherit magit-diff-hunk-heading-highlight
+                :foreground ,dracula-pink)
+               (magit-diff-lines-boundary :background ,dracula-pink)
                (magit-diffstat-added :foreground ,dracula-green)
                (magit-diffstat-removed :foreground ,dracula-red)
-               (magit-hash :foreground ,fg2)
-               (magit-hunk-heading :background ,dracula-current)
-               (magit-hunk-heading-highlight :background ,dracula-current)
-               (magit-item-highlight :background ,dracula-current)
-               (magit-log-author :foreground ,fg3)
+               (magit-log-author :foreground ,dracula-comment)
+               (magit-log-date :foreground ,dracula-comment)
+               (magit-log-graph :foreground ,dracula-yellow)
                (magit-process-ng :foreground ,dracula-orange :weight bold)
                (magit-process-ok :foreground ,dracula-green :weight bold)
+               (magit-signature-good :foreground ,dracula-green)
+               (magit-signature-bad :foreground ,dracula-red :weight bold)
+               (magit-signature-untrusted :foreground ,dracula-cyan)
+               (magit-signature-expired :foreground ,dracula-orange)
+               (magit-signature-revoked :foreground ,dracula-purple)
+               (magit-signature-error :foreground ,dracula-cyan)
+               (magit-cherry-unmatched :foreground ,dracula-cyan)
+               (magit-cherry-equivalent :foreground ,dracula-purple)
                ;; markdown
                (markdown-blockquote-face :foreground ,dracula-yellow
                                          :slant italic)
