@@ -93,12 +93,13 @@ read it before opening a new issue about your will.")
                 (dracula-yellow  "#f1fa8c" "#ffff87" "yellow")      ; official yellow
                 ;; Other colors
                 (bg2             "#373844" "#121212" "brightblack")
-                (bg3             "#464752" "#262626" "brightblack")
-                (bg4             "#565761" "#444444" "brightblack")
+                (bg3             "#565761" "#444444" "brightblack")
                 (fg2             "#e2e2dc" "#e4e4e4" "brightwhite")
                 (fg3             "#ccccc7" "#c6c6c6" "white")
                 (fg4             "#b6b6b2" "#b2b2b2" "white")
-                (other-blue      "#0189cc" "#0087ff" "brightblue")))
+                (dark-red        "#880000" "#870000" "red") ; 40% darker
+                (dark-green      "#037a22" "#00af00" "green") ; 40% darker
+                (dark-blue       "#0189cc" "#0087ff" "brightblue")))
       (faces '(;; default / basic faces
                (cursor :background ,fg3)
                (default :background ,dracula-bg :foreground ,dracula-fg)
@@ -107,14 +108,14 @@ read it before opening a new issue about your will.")
                (ffap :foreground ,fg4)
                (fringe :background ,dracula-bg :foreground ,fg4)
                (header-line :inherit 'mode-line)
-               (highlight :foreground ,fg3 :background ,bg3)
+               (highlight :foreground ,fg3 :background ,dracula-current)
                (hl-line :background ,dracula-current :extend t)
                (info-quoted-name :foreground ,dracula-orange)
                (info-string :foreground ,dracula-yellow)
                (lazy-highlight :foreground ,fg2 :background ,bg2)
                (link :foreground ,dracula-cyan :underline t)
-               (linum :slant italic :foreground ,bg4 :background ,dracula-bg)
-               (line-number :slant italic :foreground ,bg4 :background ,dracula-bg)
+               (linum :slant italic :foreground ,bg3 :background ,dracula-bg)
+               (line-number :slant italic :foreground ,bg3 :background ,dracula-bg)
                (match :background ,dracula-yellow :foreground ,dracula-bg)
                (menu :background ,dracula-current :inverse-video nil
                      ,@(if dracula-alternate-mode-line-and-minibuffer
@@ -167,13 +168,13 @@ read it before opening a new issue about your will.")
                (bookmark-face :foreground ,dracula-pink)
                ;; company
                (company-echo-common :foreground ,dracula-bg :background ,dracula-fg)
-               (company-preview :background ,dracula-current :foreground ,other-blue)
+               (company-preview :background ,dracula-current :foreground ,dark-blue)
                (company-preview-common :inherit company-preview
                                        :foreground ,dracula-pink)
                (company-preview-search :inherit company-preview
                                        :foreground ,dracula-green)
                (company-scrollbar-bg :background ,dracula-comment)
-               (company-scrollbar-fg :foreground ,other-blue)
+               (company-scrollbar-fg :foreground ,dark-blue)
                (company-tooltip :inherit tooltip)
                (company-tooltip-search :foreground ,dracula-green
                                        :underline t)
@@ -189,6 +190,18 @@ read it before opening a new issue about your will.")
                (completions-annotations :inherit font-lock-comment-face)
                (completions-common-part :foreground ,dracula-green)
                (completions-first-difference :foreground ,dracula-pink :weight bold)
+               ;; diff
+               (diff-added :background ,dark-green :foreground ,dracula-fg :extend t)
+               (diff-removed :background ,dark-red :foreground ,dracula-fg :extend t)
+               (diff-refine-added :background ,dracula-green
+                                  :foreground ,dracula-bg)
+               (diff-refine-removed :background ,dracula-red
+                                    :foreground ,dracula-fg)
+               (diff-indicator-added :foreground ,dracula-green)
+               (diff-indicator-removed :foreground ,dracula-red)
+               (diff-indicator-changed :foreground ,dracula-orange)
+               (diff-error :foreground ,dracula-red, :background ,dracula-bg
+                           :weight bold)
                ;; diff-hl
                (diff-hl-change :foreground ,dracula-orange :background ,dracula-orange)
                (diff-hl-delete :foreground ,dracula-red :background ,dracula-red)
@@ -208,7 +221,7 @@ read it before opening a new issue about your will.")
                (diredp-date-time :foreground ,dracula-fg)
                (diredp-deletion-file-name :foreground ,dracula-pink :background ,dracula-current)
                (diredp-deletion :foreground ,dracula-pink :weight bold)
-               (diredp-dir-heading :foreground ,fg2 :background ,bg4)
+               (diredp-dir-heading :foreground ,fg2 :background ,bg3)
                (diredp-dir-name :inherit dired-directory)
                (diredp-dir-priv :inherit dired-directory)
                (diredp-executable-tag :foreground ,dracula-orange)
@@ -230,6 +243,13 @@ read it before opening a new issue about your will.")
                (diredp-link-priv :foreground ,dracula-orange)
                (diredp-autofile-name :foreground ,dracula-yellow)
                (diredp-tagged-autofile-name :foreground ,dracula-yellow)
+               ;; ediff
+               (ediff-current-diff-A :background ,dark-red)
+               (ediff-fine-diff-A :background ,dracula-red :foreground ,dracula-fg)
+               (ediff-current-diff-B :background ,dark-green)
+               (ediff-fine-diff-B :background ,dracula-green :foreground ,dracula-bg)
+               (ediff-current-diff-C :background ,dark-blue)
+               (ediff-fine-diff-C :background ,dracula-cyan :foreground ,dracula-bg)
                ;; eglot
                (eglot-diagnostic-tag-unnecessary-face :inherit warning)
                (eglot-diagnostic-tag-deprecated-face :inherit warning :strike-through t)
@@ -326,7 +346,7 @@ read it before opening a new issue about your will.")
                (gnus-summary-high-read :inherit gnus-summary-high-unread :weight normal)
                (gnus-summary-high-ancient :inherit gnus-summary-high-read)
                (gnus-summary-high-ticked :inherit gnus-summary-high-read :underline t)
-               (gnus-summary-normal-unread :foreground ,other-blue :weight bold)
+               (gnus-summary-normal-unread :foreground ,dark-blue :weight bold)
                (gnus-summary-normal-read :foreground ,dracula-comment :weight normal)
                (gnus-summary-normal-ancient :inherit gnus-summary-normal-read :weight light)
                (gnus-summary-normal-ticked :foreground ,dracula-pink :weight bold)
@@ -347,7 +367,7 @@ read it before opening a new issue about your will.")
                (helm-candidate-number :foreground ,dracula-bg :background ,dracula-fg)
                (helm-ff-directory :foreground ,dracula-green :background ,dracula-bg :weight bold)
                (helm-ff-dotted-directory :foreground ,dracula-green :background ,dracula-bg :weight normal)
-               (helm-ff-executable :foreground ,other-blue :background ,dracula-bg :weight normal)
+               (helm-ff-executable :foreground ,dark-blue :background ,dracula-bg :weight normal)
                (helm-ff-file :foreground ,dracula-fg :background ,dracula-bg :weight normal)
                (helm-ff-invalid-symlink :foreground ,dracula-pink :background ,dracula-bg :weight bold)
                (helm-ff-prefix :foreground ,dracula-bg :background ,dracula-pink :weight normal)
@@ -367,7 +387,7 @@ read it before opening a new issue about your will.")
                (helm-source-header :foreground ,dracula-pink :background ,dracula-bg :underline nil :weight bold)
                (helm-time-zone-current :foreground ,dracula-orange :background ,dracula-bg)
                (helm-time-zone-home :foreground ,dracula-purple :background ,dracula-bg)
-               (helm-visible-mark :foreground ,dracula-bg :background ,bg3)
+               (helm-visible-mark :foreground ,dracula-bg :background ,dracula-current)
                ;; highlight-indentation minor mode
                (highlight-indentation-face :background ,bg2)
                ;; icicle
@@ -399,7 +419,7 @@ read it before opening a new issue about your will.")
                (icicle-input-completion-fail :foreground ,dracula-pink)
                (icicle-historical-candidate-other :foreground ,dracula-fg)
                (icicle-historical-candidate :foreground ,dracula-fg)
-               (icicle-current-candidate-highlight :foreground ,dracula-orange :background ,bg3)
+               (icicle-current-candidate-highlight :foreground ,dracula-orange :background ,dracula-current)
                (icicle-Completions-instruction-2 :foreground ,fg4)
                (icicle-Completions-instruction-1 :foreground ,fg4)
                (icicle-completion :foreground ,dracula-fg)
@@ -454,7 +474,7 @@ read it before opening a new issue about your will.")
                (js2-external-variable :foreground ,dracula-purple)
                (js2-function-param :foreground ,dracula-cyan)
                (js2-jsdoc-html-tag-delimiter :foreground ,dracula-yellow)
-               (js2-jsdoc-html-tag-name :foreground ,other-blue)
+               (js2-jsdoc-html-tag-name :foreground ,dark-blue)
                (js2-jsdoc-value :foreground ,dracula-yellow)
                (js2-private-function-call :foreground ,dracula-cyan)
                (js2-private-member :foreground ,fg3)
@@ -471,7 +491,7 @@ read it before opening a new issue about your will.")
                (lsp-ui-peek-filename :foreground ,dracula-pink :weight bold)
                (lsp-ui-peek-line-number :foreground ,dracula-fg)
                (lsp-ui-peek-highlight :inherit highlight :distant-foreground ,dracula-bg)
-               (lsp-ui-peek-header :background ,bg3 :foreground ,fg3, :weight bold)
+               (lsp-ui-peek-header :background ,dracula-current :foreground ,fg3, :weight bold)
                (lsp-ui-peek-footer :inherit lsp-ui-peek-header)
                (lsp-ui-peek-selection :inherit match)
                (lsp-ui-sideline-symbol :foreground ,fg4 :box (:line-width -1 :color ,fg4) :height 0.99)
@@ -484,49 +504,65 @@ read it before opening a new issue about your will.")
                ;; magit
                (magit-branch-local :foreground ,dracula-cyan)
                (magit-branch-remote :foreground ,dracula-green)
+               (magit-refname :foreground ,dark-blue)
                (magit-tag :foreground ,dracula-orange)
+               (magit-hash :foreground ,dracula-comment)
+               (magit-dimmed :foreground ,dracula-comment)
                (magit-section-heading :foreground ,dracula-pink :weight bold)
-               (magit-section-highlight :background ,bg3 :extend t)
-               (magit-diff-context-highlight :background ,bg3
-                                             :foreground ,fg3
-                                             :extend t)
+               (magit-section-highlight :background ,dracula-current :extend t)
+               (magit-diff-context :foreground ,fg3 :extend t)
+               (magit-diff-context-highlight :inherit magit-section-highlight
+                                             :foreground ,dracula-fg)
                (magit-diff-revision-summary :foreground ,dracula-orange
                                             :background ,dracula-bg
                                             :weight bold)
-               (magit-diff-revision-summary-highlight :foreground ,dracula-orange
-                                                      :background ,bg3
-                                                      :weight bold
-                                                      :extend t)
-               ;; the four following lines are just a patch of the
-               ;; upstream color to add the extend keyword.
-               (magit-diff-added :background "#335533"
-                                 :foreground "#ddffdd"
-                                 :extend t)
-               (magit-diff-added-highlight :background "#336633"
-                                           :foreground "#cceecc"
-                                           :extend t)
-               (magit-diff-removed :background "#553333"
-                                   :foreground "#ffdddd"
-                                   :extend t)
-               (magit-diff-removed-highlight :background "#663333"
-                                             :foreground "#eecccc"
-                                             :extend t)
+               (magit-diff-revision-summary-highlight :inherit magit-section-highlight
+                                                      :foreground ,dracula-orange
+                                                      :weight bold)
+               (magit-diff-added :background ,dracula-bg :foreground ,dracula-green)
+               (magit-diff-added-highlight :background ,dracula-current
+                                           :foreground ,dracula-green)
+               (magit-diff-removed :background ,dracula-bg :foreground ,dracula-red)
+               (magit-diff-removed-highlight :background ,dracula-current
+                                             :foreground ,dracula-red)
                (magit-diff-file-heading :foreground ,dracula-fg)
-               (magit-diff-file-heading-highlight :inherit magit-section-highlight)
+               (magit-diff-file-heading-highlight :inherit magit-section-highlight
+                                                  :weight bold)
+               (magit-diff-file-heading-selection
+                :inherit magit-diff-file-heading-highlight
+                :foreground ,dracula-pink)
+               (magit-diff-hunk-heading :inherit magit-diff-context
+                                        :background ,bg3)
+               (magit-diff-hunk-heading-highlight
+                :inherit magit-diff-context-highlight
+                :weight bold)
+               (magit-diff-hunk-heading-selection
+                :inherit magit-diff-hunk-heading-highlight
+                :foreground ,dracula-pink)
+               (magit-diff-lines-heading
+                :inherit magit-diff-hunk-heading-highlight
+                :foreground ,dracula-pink)
+               (magit-diff-lines-boundary :background ,dracula-pink)
                (magit-diffstat-added :foreground ,dracula-green)
                (magit-diffstat-removed :foreground ,dracula-red)
-               (magit-hash :foreground ,fg2)
-               (magit-hunk-heading :background ,bg3)
-               (magit-hunk-heading-highlight :background ,bg3)
-               (magit-item-highlight :background ,bg3)
-               (magit-log-author :foreground ,fg3)
+               (magit-log-author :foreground ,dracula-comment)
+               (magit-log-date :foreground ,dracula-comment)
+               (magit-log-graph :foreground ,dracula-yellow)
                (magit-process-ng :foreground ,dracula-orange :weight bold)
                (magit-process-ok :foreground ,dracula-green :weight bold)
+               (magit-signature-good :foreground ,dracula-green)
+               (magit-signature-bad :foreground ,dracula-red :weight bold)
+               (magit-signature-untrusted :foreground ,dracula-cyan)
+               (magit-signature-expired :foreground ,dracula-orange)
+               (magit-signature-revoked :foreground ,dracula-purple)
+               (magit-signature-error :foreground ,dracula-cyan)
+               (magit-cherry-unmatched :foreground ,dracula-cyan)
+               (magit-cherry-equivalent :foreground ,dracula-purple)
                ;; markdown
                (markdown-blockquote-face :foreground ,dracula-yellow
                                          :slant italic)
                (markdown-code-face :foreground ,dracula-orange)
-               (markdown-footnote-face :foreground ,other-blue)
+               (markdown-footnote-face :foreground ,dark-blue)
                (markdown-header-face :weight normal)
                (markdown-header-face-1
                 :inherit bold :foreground ,dracula-pink
@@ -543,7 +579,7 @@ read it before opening a new issue about your will.")
                (markdown-header-face-4 :foreground ,dracula-yellow)
                (markdown-header-face-5 :foreground ,dracula-cyan)
                (markdown-header-face-6 :foreground ,dracula-orange)
-               (markdown-header-face-7 :foreground ,other-blue)
+               (markdown-header-face-7 :foreground ,dark-blue)
                (markdown-header-face-8 :foreground ,dracula-fg)
                (markdown-inline-code-face :foreground ,dracula-green)
                (markdown-plain-url-face :inherit link)
@@ -616,17 +652,17 @@ read it before opening a new issue about your will.")
                (org-agenda-structure :foreground ,dracula-purple)
                (org-block :foreground ,dracula-orange)
                (org-code :foreground ,dracula-green)
-               (org-column :background ,bg4)
+               (org-column :background ,bg3)
                (org-column-title :inherit org-column :weight bold :underline t)
                (org-date :foreground ,dracula-cyan :underline t)
-               (org-document-info :foreground ,other-blue)
+               (org-document-info :foreground ,dark-blue)
                (org-document-info-keyword :foreground ,dracula-comment)
                (org-document-title :weight bold :foreground ,dracula-orange
                                    ,@(when dracula-enlarge-headings
                                        (list :height dracula-height-doc-title)))
                (org-done :foreground ,dracula-green)
                (org-ellipsis :foreground ,dracula-comment)
-               (org-footnote :foreground ,other-blue)
+               (org-footnote :foreground ,dark-blue)
                (org-formula :foreground ,dracula-pink)
                (org-headline-done :foreground ,dracula-comment
                                   :weight normal :strike-through t)
@@ -643,7 +679,7 @@ read it before opening a new issue about your will.")
                (org-level-4 :weight normal :foreground ,dracula-yellow)
                (org-level-5 :weight normal :foreground ,dracula-cyan)
                (org-level-6 :weight normal :foreground ,dracula-orange)
-               (org-level-7 :weight normal :foreground ,other-blue)
+               (org-level-7 :weight normal :foreground ,dark-blue)
                (org-level-8 :weight normal :foreground ,dracula-fg)
                (org-link :foreground ,dracula-cyan :underline t)
                (org-priority :foreground ,dracula-cyan)
@@ -689,7 +725,7 @@ read it before opening a new issue about your will.")
                (rainbow-delimiters-depth-5-face :foreground ,dracula-orange)
                (rainbow-delimiters-depth-6-face :foreground ,dracula-green)
                (rainbow-delimiters-depth-7-face :foreground ,dracula-yellow)
-               (rainbow-delimiters-depth-8-face :foreground ,other-blue)
+               (rainbow-delimiters-depth-8-face :foreground ,dark-blue)
                (rainbow-delimiters-unmatched-face :foreground ,dracula-orange)
                ;; rpm-spec
                (rpm-spec-dir-face :foreground ,dracula-green)
@@ -708,7 +744,7 @@ read it before opening a new issue about your will.")
                (rst-level-4 :foreground ,dracula-yellow)
                (rst-level-5 :foreground ,dracula-cyan)
                (rst-level-6 :foreground ,dracula-orange)
-               (rst-level-7 :foreground ,other-blue)
+               (rst-level-7 :foreground ,dark-blue)
                (rst-level-8 :foreground ,dracula-fg)
                ;; selectrum-mode
                (selectrum-current-candidate :weight bold)
@@ -723,6 +759,13 @@ read it before opening a new issue about your will.")
                                  :weight bold)
                (show-paren-match-expression :inherit match)
                (show-paren-mismatch :inherit font-lock-warning-face)
+               ;; shr
+               (shr-h1 :foreground ,dracula-pink :weight bold :height 1.3)
+               (shr-h2 :foreground ,dracula-purple :weight bold)
+               (shr-h3 :foreground ,dracula-green :slant italic)
+               (shr-h4 :foreground ,dracula-yellow)
+               (shr-h5 :foreground ,dracula-cyan)
+               (shr-h6 :foreground ,dracula-orange)
                ;; slime
                (slime-repl-inputed-output-face :foreground ,dracula-purple)
                ;; spam
@@ -822,7 +865,7 @@ read it before opening a new issue about your will.")
                ;; whitespace
                (whitespace-big-indent :background ,dracula-red :foreground ,dracula-red)
                (whitespace-empty :background ,dracula-orange :foreground ,dracula-red)
-               (whitespace-hspace :background ,bg3 :foreground ,dracula-comment)
+               (whitespace-hspace :background ,dracula-current :foreground ,dracula-comment)
                (whitespace-indentation :background ,dracula-orange :foreground ,dracula-red)
                (whitespace-line :background ,dracula-bg :foreground ,dracula-pink)
                (whitespace-newline :foreground ,dracula-comment)
