@@ -19,7 +19,7 @@ by doing `M-x customize-group dracula` or setting one or more of the
 following values in your Emacs init file. Note that these variables
 need to be set before `load-theme` is invoked for Dracula.
 
-```
+```el
 ;; Don't change the font size for some headings and titles (default t)
 (setq dracula-enlarge-headings nil)
 
@@ -45,16 +45,18 @@ This repository contains a small script named `start_emacs_test.sh`,
 which helps you to test this color theme in various environment
 (graphical, 256+ colors terminals, 16 colors terminals).
 
-    # Graphical test
-    ./start_emacs_test.sh
+```el
+# Graphical test
+./start_emacs_test.sh
 
-    # Full color terminal
-    ./start_emacs_test.sh -nw 256
+# Full color terminal
+./start_emacs_test.sh -nw 256
 
-    # TTY like env
-    ./start_emacs_test.sh -nw 16
+# TTY like env
+./start_emacs_test.sh -nw 16
+```
 
-This script requires the xterm terminfo files.
+This script requires the **xterm** terminfo files.
 
 ## Team
 
@@ -70,6 +72,10 @@ This theme is maintained by the following person(s) and a bunch of
 - [Twitter](https://twitter.com/draculatheme) - Best for getting updates about themes and new stuff.
 - [GitHub](https://github.com/dracula/dracula-theme/discussions) - Best for asking questions and discussing issues.
 - [Discord](https://draculatheme.com/discord-invite) - Best for hanging out with the community.
+
+## Dracula PRO
+
+[![Dracula PRO](./dracula-pro.png)](https://draculatheme.com/pro)
 
 ## License
 
