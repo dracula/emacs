@@ -69,7 +69,7 @@ following lines in their config file after having load the
 Dracula theme:
 
     (unless (display-graphic-p)
-      (set-face-background 'default \"black\" nil))
+      (set-face-background \\='default \"black\" nil))
 
 There is a lot of discussion behind the 256 colors theme (see URL
 `https://github.com/dracula/emacs/pull/57').  Please take time to
