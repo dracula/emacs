@@ -6,7 +6,7 @@
 
 ;; Maintainer: Étienne Deparis <etienne@depar.is>
 ;; Author: film42
-;; Version: 1.7.0
+;; Version: 1.8.1
 ;; Package-Requires: ((emacs "24.3"))
 ;; URL: https://github.com/dracula/emacs
 
