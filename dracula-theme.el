@@ -18,6 +18,10 @@
 
 ;;; News:
 
+;;;; Version next
+
+;; Fix ansi-color definition
+
 ;;;; Version 1.8.1
 
 ;; Fix missing 1.8.0 docstring...
@@ -245,6 +249,23 @@ read it before opening a new issue about your will.")
                (font-lock-warning-face :inherit warning :background ,bg2)
                ;; auto-complete
                (ac-completion-face :underline t :foreground ,dracula-pink)
+               ;; ansi-color
+               (ansi-color-black :foreground ,dracula-bg :background ,dracula-bg)
+               (ansi-color-bright-black :foreground "black" :background "black")
+               (ansi-color-red :foreground ,dark-red :background ,dark-red)
+               (ansi-color-bright-red :foreground ,dracula-red :background ,dracula-red)
+               (ansi-color-green :foreground ,dark-green :background ,dark-green)
+               (ansi-color-bright-green :foreground ,dracula-green :background ,dracula-green)
+               (ansi-color-yellow :foreground ,dracula-orange :background ,dracula-orange)
+               (ansi-color-bright-yellow :foreground ,dracula-yellow :background ,dracula-yellow)
+               (ansi-color-blue :foreground ,dark-blue :background ,dark-blue)
+               (ansi-color-bright-blue :foreground ,dracula-comment :background ,dracula-comment)
+               (ansi-color-magenta :foreground ,dracula-purple :background ,dracula-purple)
+               (ansi-color-bright-magenta :foreground ,dracula-pink :background ,dracula-pink)
+               (ansi-color-cyan :foreground ,dracula-cyan :background ,dracula-cyan)
+               (ansi-color-bright-cyan :foreground ,dracula-cyan :background ,dracula-cyan)
+               (ansi-color-white :foreground ,dracula-fg :background ,dracula-fg)
+               (ansi-color-bright-white :foreground "white" :background "white")
                ;; bookmarks
                (bookmark-face :foreground ,dracula-pink)
                ;; company
@@ -981,24 +1002,7 @@ read it before opening a new issue about your will.")
                       (t                       ; should be only tty-like envs
                        ,(funcall expand-with-func 'cadddr spec))))
                    whole-theme))
-           whole-theme))
-
-  (apply #'custom-theme-set-variables
-         'dracula
-         (let ((get-func
-                (pcase (display-color-cells)
-                  ((pred (<= 16777216)) 'car) ; fully graphical envs
-                  ((pred (<= 256)) 'cadr)     ; terminal withs 256 colors
-                  (_ 'caddr))))               ; should be only tty-like envs
-           `((ansi-color-names-vector
-              [,(funcall get-func (alist-get 'dracula-bg colors))
-               ,(funcall get-func (alist-get 'dracula-red colors))
-               ,(funcall get-func (alist-get 'dracula-green colors))
-               ,(funcall get-func (alist-get 'dracula-yellow colors))
-               ,(funcall get-func (alist-get 'dracula-comment colors))
-               ,(funcall get-func (alist-get 'dracula-purple colors))
-               ,(funcall get-func (alist-get 'dracula-cyan colors))
-               ,(funcall get-func (alist-get 'dracula-fg colors))])))))
+           whole-theme)))
 
 
 ;;;###autoload
