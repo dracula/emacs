@@ -16,6 +16,87 @@
 ;; This theme tries as much as possible to follow the consensual
 ;; specification (see URL `https://spec.draculatheme.com/').
 
+;;; News:
+
+;;;; Version 1.8.1
+
+;; Fix missing 1.8.0 docstring...
+
+;;;; Version 1.8.0
+
+;; New package support:
+;;
+;; - Add support for ansi-color-names-vector
+;; - Add support for bookmark-face
+;; - Add support for (e)diff-mode. Add dark-red and dark-green new colors
+;; - Add support for eldoc-box
+;; - Add support for elfeed
+;; - Add support for gemini-mode and elpher
+;; - Add support for go-test
+;; - Add support for header-line
+;; - Add support for ivy
+;; - Add support for lsp-ui
+;; - Add support for neotree
+;; - Add support for perspective and mini-modeline
+;; - Add support for reStructuredText
+;; - Add support for selectrum-mode
+;; - Add support for shadow-face
+;; - Add support for speedbar
+;; - Add support for telephone-line
+;; - Add support for tooltip-face
+;; - Add support for tree-sitter and add missing font-lock faces
+;; - Add support for web-mode-css-property-name-face
+;; - Add support for which-key-mode
+;;
+;; - Fix ‘message-cited-text-*’ colors
+;; - Use same color for gnus than message mode and old mu4e-view mode
+;; - Follow dracula color specs for Markdown and Org mode
+;; - Improve readability of company colors
+;; - Improve default mode-line colors
+;; - Set powerline active and inactive dracula colors
+;; - Improve completions (from minibuffer.el) colors
+;;
+;; Terminal related things:
+;;
+;; - Try a new 256 colors palette
+;; - Add a setting to force 24bit colors on 256 colors terms
+;; - Do not advertize dracula-use-24-bit-colors-on-256-colors-terms in README
+;; - Avoid black and black text for TUI applications
+;; - Use a dark menubar on terminals
+;;
+;; Tests related things:
+;;
+;; - Improve a little test script
+;; - Avoid auto-save-default folder creation in test profile
+;; - Remove test profile from melpa package content
+;;
+;; README related things:
+;;
+;; - Remove outdated homebrew instructions
+;; - Update screenshot
+;; - Update install instruction to advertize NonGNU Elpa
+;; - Update README configure section with correct names.
+;; - 📃 Standardize docs with other dracula repositories
+;;
+;; Others:
+;;
+;; - Fix comment before color listing
+;; - Use unspecified-bg/-fg instead of nil color spec
+;; - Use inherit highlight for two matching company faces
+;; - Remove useless , in front of inherited faces
+;; - Remove cl-lib dependency
+;; - Reduce eval call scope
+;; - Little change to file metadata
+;; - Remove some unspecified color specifications
+;; - Alphabetically sort basic faces settings
+;; - Move mode-line faces in basic faces section
+;; - Little adjustments for eglot package
+;; - Remove bg3 as it was very similar to dracula-current
+;; - Rename other-blue to dark-blue
+;; - Colorize shr title as in the other markup modes
+;; - Improve magit faces
+;;
+
 ;;; Code:
 (deftheme dracula)
 
