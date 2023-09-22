@@ -252,18 +252,30 @@ read it before opening a new issue about your will.")
                ;; ansi-color
                (ansi-color-black :foreground ,dracula-bg :background ,dracula-bg)
                (ansi-color-bright-black :foreground "black" :background "black")
-               (ansi-color-red :foreground ,dark-red :background ,dark-red)
-               (ansi-color-bright-red :foreground ,dracula-red :background ,dracula-red)
-               (ansi-color-green :foreground ,dark-green :background ,dark-green)
-               (ansi-color-bright-green :foreground ,dracula-green :background ,dracula-green)
-               (ansi-color-yellow :foreground ,dracula-orange :background ,dracula-orange)
-               (ansi-color-bright-yellow :foreground ,dracula-yellow :background ,dracula-yellow)
-               (ansi-color-blue :foreground ,dark-blue :background ,dark-blue)
-               (ansi-color-bright-blue :foreground ,dracula-comment :background ,dracula-comment)
-               (ansi-color-magenta :foreground ,dracula-purple :background ,dracula-purple)
-               (ansi-color-bright-magenta :foreground ,dracula-pink :background ,dracula-pink)
+               (ansi-color-red :foreground ,dracula-red :background ,dracula-red)
+               (ansi-color-bright-red :foreground ,dracula-red
+                                      :background ,dracula-red
+                                      :weight bold)
+               (ansi-color-green :foreground ,dracula-green :background ,dracula-green)
+               (ansi-color-bright-green :foreground ,dracula-green
+                                        :background ,dracula-green
+                                        :weight bold)
+               (ansi-color-yellow :foreground ,dracula-yellow :background ,dracula-yellow)
+               (ansi-color-bright-yellow :foreground ,dracula-yellow
+                                         :background ,dracula-yellow
+                                         :weight bold)
+               (ansi-color-blue :foreground ,dracula-comment :background ,dracula-comment)
+               (ansi-color-bright-blue :foreground ,dracula-comment
+                                       :background ,dracula-comment
+                                       :weight bold)
+               (ansi-color-magenta :foreground ,dracula-pink :background ,dracula-pink)
+               (ansi-color-bright-magenta :foreground ,dracula-pink
+                                          :background ,dracula-pink
+                                          :weight bold)
                (ansi-color-cyan :foreground ,dracula-cyan :background ,dracula-cyan)
-               (ansi-color-bright-cyan :foreground ,dracula-cyan :background ,dracula-cyan)
+               (ansi-color-bright-cyan :foreground ,dracula-cyan
+                                       :background ,dracula-cyan
+                                       :weight bold)
                (ansi-color-white :foreground ,dracula-fg :background ,dracula-fg)
                (ansi-color-bright-white :foreground "white" :background "white")
                ;; bookmarks
