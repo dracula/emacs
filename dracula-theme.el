@@ -6,7 +6,7 @@
 
 ;; Maintainer: Étienne Deparis <etienne@depar.is>
 ;; Author: film42
-;; Version: 1.8.1
+;; Version: 1.8.2
 ;; Package-Requires: ((emacs "24.3"))
 ;; URL: https://github.com/dracula/emacs
 
@@ -18,9 +18,10 @@
 
 ;;; News:
 
-;;;; Version next
+;;;; Version 1.8.2
 
 ;; Fix ansi-color definition
+;; Support solaire-mode
 
 ;;;; Version 1.8.1
 
