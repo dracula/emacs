@@ -882,6 +882,8 @@ read it before opening a new issue about your will.")
                (shr-h6 :foreground ,dracula-orange)
                ;; slime
                (slime-repl-inputed-output-face :foreground ,dracula-purple)
+               ;; solaire-mode
+               (solaire-default-face :background ,bg2)
                ;; spam
                (spam :inherit gnus-summary-normal-read :foreground ,dracula-orange
                      :strike-through t :slant oblique)
