@@ -45,7 +45,7 @@ This repository contains a small script named `start_emacs_test.sh`,
 which helps you to test this color theme in various environment
 (graphical, 256+ colors terminals, 16 colors terminals).
 
-```el
+```sh
 # Graphical test
 ./start_emacs_test.sh
 
