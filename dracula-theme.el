@@ -611,7 +611,7 @@ read it before opening a new issue about your will.")
                (lsp-ui-peek-selection :inherit match)
                (lsp-ui-sideline-symbol :foreground ,fg4 :box (:line-width -1 :color ,fg4) :height 0.99)
                (lsp-ui-sideline-current-symbol :foreground ,dracula-fg :weight ultra-bold
-                                               :box (:line-width -1 :color dracula-fg) :height 0.99)
+                                               :box (:line-width -1 :color ,dracula-fg) :height 0.99)
                (lsp-ui-sideline-code-action :foreground ,dracula-yellow)
                (lsp-ui-sideline-symbol-info :slant italic :height 0.99)
                (lsp-ui-doc-background :background ,dracula-bg)
