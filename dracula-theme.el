@@ -21,6 +21,7 @@
 ;;;; Version 1.8.3
 
 ;; Add missing comma in front of lsp-ui-sideline-current-symbol color
+;; Change default region face
 
 ;;;; Version 1.8.2
 
@@ -226,7 +227,7 @@ read it before opening a new issue about your will.")
                       (list :foreground dracula-comment :box dracula-bg)
                     (list :foreground fg4 :box bg2)))
                (read-multiple-choice-face :inherit completions-first-difference)
-               (region :inherit match :extend t)
+               (region :background ,dracula-current :extend nil)
                (shadow :foreground ,dracula-comment)
                (success :foreground ,dracula-green)
                (tooltip :foreground ,dracula-fg :background ,dracula-current)
