@@ -18,6 +18,10 @@
 
 ;;; News:
 
+;;;; Version 1.8.3
+
+;; Add missing comma in front of lsp-ui-sideline-current-symbol color
+
 ;;;; Version 1.8.2
 
 ;; Fix ansi-color definition
