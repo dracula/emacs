@@ -22,6 +22,7 @@
 
 ;; Add missing comma in front of lsp-ui-sideline-current-symbol color
 ;; Change default region face
+;; Improve tab-line-* faces
 
 ;;;; Version 1.8.2
 
@@ -911,13 +912,18 @@ read it before opening a new issue about your will.")
                (tab-bar-tab-inactive :foreground ,dracula-purple :background ,bg2
                                      :box (:line-width 2 :color ,bg2 :style nil))
                (tab-line :foreground ,dracula-purple :background ,dracula-current
-                         :height 0.9 :inherit variable-pitch)
-               (tab-line-tab :foreground ,dracula-pink :background ,dracula-bg
-                             :box (:line-width 2 :color ,dracula-bg :style nil))
-               (tab-line-tab-inactive :foreground ,dracula-purple :background ,bg2
-                                      :box (:line-width 2 :color ,bg2 :style nil))
-               (tab-line-tab-current :inherit tab-line-tab)
+                         :height 0.92 :inherit variable-pitch)
                (tab-line-close-highlight :foreground ,dracula-red)
+               (tab-line-highlight :weight bold)
+               (tab-line-tab :foreground ,dracula-purple :background ,bg2
+                             :box (:line-width 4 :color ,bg2 :style nil))
+               (tab-line-tab-current :foreground ,dracula-pink :background ,dracula-bg
+                                     :box (:line-width 4 :color ,dracula-bg :style nil))
+               (tab-line-tab-group :background ,dracula-comment)
+               (tab-line-tab-inactive :inherit tab-line-tab)
+               (tab-line-tab-inactive-alternate :background ,bg3)
+               (tab-line-tab-modified :weight bold)
+               (tab-line-tab-special :foreground ,dracula-green)
                ;; telephone-line
                (telephone-line-accent-active :background ,dracula-bg :foreground ,dracula-pink)
                (telephone-line-accent-inactive :background ,bg2 :foreground ,dracula-purple)
