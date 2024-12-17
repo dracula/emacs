@@ -918,11 +918,12 @@ read it before opening a new issue about your will.")
                (tab-line-tab :foreground ,dracula-purple :background ,bg2
                              :box (:line-width 4 :color ,bg2 :style nil))
                (tab-line-tab-current :foreground ,dracula-pink :background ,dracula-bg
-                                     :box (:line-width 4 :color ,dracula-bg :style nil))
+                                     :box (:line-width 4 :color ,dracula-bg :style nil)
+                                     :weight bold)
                (tab-line-tab-group :background ,dracula-comment)
                (tab-line-tab-inactive :inherit tab-line-tab)
                (tab-line-tab-inactive-alternate :background ,bg3)
-               (tab-line-tab-modified :weight bold)
+               (tab-line-tab-modified :slant italic)
                (tab-line-tab-special :foreground ,dracula-green)
                ;; telephone-line
                (telephone-line-accent-active :background ,dracula-bg :foreground ,dracula-pink)
