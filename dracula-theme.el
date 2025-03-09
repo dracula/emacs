@@ -411,12 +411,34 @@ read it before opening a new issue about your will.")
                ;; flyspell
                (flyspell-duplicate :underline (:style wave :color ,dracula-orange))
                (flyspell-incorrect :underline (:style wave :color ,dracula-red))
-               ;; font-latex
+               ;; auctex
+               (TeX-error-description-error :inherit error)
+               (TeX-error-description-tex-said :foreground ,dracula-cyan)
+               (TeX-error-description-warning :inherit warning)
                (font-latex-bold-face :foreground ,dracula-purple)
                (font-latex-italic-face :foreground ,dracula-pink :slant italic)
                (font-latex-match-reference-keywords :foreground ,dracula-cyan)
                (font-latex-match-variable-keywords :foreground ,dracula-fg)
+               (font-latex-math-face :foreground ,dracula-orange)
+               (font-latex-script-char-face :inherit font-latex-math-face)
+               (font-latex-sectioning-0-face :foreground ,dracula-purple :weight bold
+                                             ,@(when dracula-enlarge-headings
+                                                 (list :height dracula-height-title-1)))
+               (font-latex-sectioning-1-face :foreground ,dracula-purple :weight bold
+                                             ,@(when dracula-enlarge-headings
+                                                 (list :height dracula-height-title-1)))
+               (font-latex-sectioning-2-face :foreground ,dracula-purple :weight bold
+                                             ,@(when dracula-enlarge-headings
+                                                 (list :height dracula-height-title-2)))
+               (font-latex-sectioning-3-face :foreground ,dracula-purple :weight bold
+                                             ,@(when dracula-enlarge-headings
+                                                 (list :height dracula-height-title-3)))
+               (font-latex-sectioning-4-face :foreground ,dracula-purple :weight bold)
+               (font-latex-sectioning-5-face :foreground ,dracula-purple :weight bold)
+               (font-latex-sedate-face :foreground ,dracula-pink)
                (font-latex-string-face :foreground ,dracula-yellow)
+               (font-latex-verbatim-face :foreground ,dracula-orange)
+               (font-latex-warning-face :foreground ,dracula-red)
                ;; gemini
                (gemini-heading-face-1 :inherit bold :foreground ,dracula-pink
                                       ,@(when dracula-enlarge-headings
