@@ -126,7 +126,7 @@ The theme has to be reloaded after changing anything in this group."
   :group 'dracula)
 
 (defcustom dracula-height-title-1 1.3
-  "Font size 100%."
+  "Font size 130%."
   :type 'number
   :group 'dracula)
 
@@ -136,7 +136,7 @@ The theme has to be reloaded after changing anything in this group."
   :group 'dracula)
 
 (defcustom dracula-height-title-3 1.0
-  "Font size 130%."
+  "Font size 100%."
   :type 'number
   :group 'dracula)
 
