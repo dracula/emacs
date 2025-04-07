@@ -1,4 +1,4 @@
-;;; dracula-theme.el --- Dracula Theme
+;;; dracula-theme.el --- Dracula Theme -*- lexical-binding: t; -*-
 
 ;; Copyright 2015-present, All rights reserved
 ;;
