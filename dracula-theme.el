@@ -23,6 +23,7 @@
 ;; Add missing comma in front of lsp-ui-sideline-current-symbol color
 ;; Change default region face
 ;; Improve tab-line-* faces
+;; Improve auctex (LaTeX) faces
 
 ;;;; Version 1.8.2
 
