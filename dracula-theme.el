@@ -24,6 +24,7 @@
 ;; Change default region face
 ;; Improve tab-line-* faces
 ;; Improve auctex (LaTeX) faces
+;; Support imenu-list
 
 ;;;; Version 1.8.2
 
