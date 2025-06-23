@@ -177,6 +177,7 @@ read it before opening a new issue about your will.")
                 (dracula-bg      "#282a36" "unspecified-bg" "unspecified-bg") ; official background
                 (dracula-fg      "#f8f8f2" "#ffffff" "brightwhite") ; official foreground
                 (dracula-current "#44475a" "#303030" "brightblack") ; official current-line/selection
+                (dracula-region  "#454759" "#303030" "brightblack") ; dracula-current with fake 75% alpha
                 (dracula-comment "#6272a4" "#5f5faf" "blue")        ; official comment
                 (dracula-cyan    "#8be9fd" "#87d7ff" "brightcyan")  ; official cyan
                 (dracula-green   "#50fa7b" "#5fff87" "green")       ; official green
@@ -230,7 +231,7 @@ read it before opening a new issue about your will.")
                       (list :foreground dracula-comment :box dracula-bg)
                     (list :foreground fg4 :box bg2)))
                (read-multiple-choice-face :inherit completions-first-difference)
-               (region :background ,dracula-current :extend nil)
+               (region :background ,dracula-region :extend nil)
                (shadow :foreground ,dracula-comment)
                (success :foreground ,dracula-green)
                (tooltip :foreground ,dracula-fg :background ,dracula-current)
