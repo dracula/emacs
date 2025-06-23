@@ -586,18 +586,29 @@ read it before opening a new issue about your will.")
                (imenu-list-entry-face-1 :foreground ,dracula-purple)
                (imenu-list-entry-face-2 :foreground ,dracula-green)
                (imenu-list-entry-face-3 :foreground ,dracula-yellow)
-               (imenu-list-entry-subalist-face-0 :inherit imenu-list-entry-face-0 :weight bold :underline t
-                                                 ,@(when dracula-enlarge-headings (list :height dracula-height-title-1)))
-               (imenu-list-entry-subalist-face-1 :inherit imenu-list-entry-face-1 :weight bold :underline t
-                                                 ,@(when dracula-enlarge-headings (list :height dracula-height-title-2)))
-               (imenu-list-entry-subalist-face-2 :inherit imenu-list-entry-face-2 :weight bold :underline t
-                                                 ,@(when dracula-enlarge-headings (list :height dracula-height-title-3)))
-               (imenu-list-entry-subalist-face-3 :inherit imenu-list-entry-face-3 :weight bold :underline t)
+               (imenu-list-entry-subalist-face-0 :inherit imenu-list-entry-face-0
+                                                 :weight bold :underline t
+                                                 ,@(when dracula-enlarge-headings
+                                                     (list :height dracula-height-title-1)))
+               (imenu-list-entry-subalist-face-1 :inherit imenu-list-entry-face-1
+                                                 :weight bold :underline t
+                                                 ,@(when dracula-enlarge-headings
+                                                     (list :height dracula-height-title-2)))
+               (imenu-list-entry-subalist-face-2 :inherit imenu-list-entry-face-2
+                                                 :weight bold :underline t
+                                                 ,@(when dracula-enlarge-headings
+                                                     (list :height dracula-height-title-3)))
+               (imenu-list-entry-subalist-face-3 :inherit imenu-list-entry-face-3
+                                                 :weight bold :underline t)
                ;; ivy
                (ivy-current-match
                 ,@(if dracula-alternate-mode-line-and-minibuffer
-                      (list :weight 'normal :background dracula-current :foreground dracula-green)
-                    (list :weight 'bold :background dracula-current :foreground dracula-pink)))
+                      (list :background dracula-current
+                            :foreground dracula-green
+                            :weight 'normal)
+                    (list :background dracula-current
+                          :foreground dracula-pink
+                          :weight 'bold)))
                ;; Highlights the background of the match.
                (ivy-minibuffer-match-face-1 :background ,dracula-current)
                ;; Highlights the first matched group.
