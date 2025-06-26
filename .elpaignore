@@ -1,5 +1,6 @@
+.github/
 dracula-pro.png
 INSTALL.md
+profile-test.el
 screenshot.png
 start_emacs_test.sh
-test-profile.el
