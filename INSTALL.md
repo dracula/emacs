@@ -21,7 +21,7 @@ M-x package-install <RET> dracula-theme
 #### Install using Homebrew
 
 ```bash
-    brew install emacs-dracula
+brew install emacs-dracula
 ```
 
 #### Install manually
