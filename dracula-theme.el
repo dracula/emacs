@@ -811,13 +811,16 @@ read it before opening a new issue about your will.")
                (neo-vc-added-face :foreground ,dracula-orange)
                (neo-vc-conflict-face :foreground ,dracula-red)
                (neo-vc-default-face :inherit neo-file-link-face)
-               (neo-vc-edited-face :foreground ,dracula-orange)
+               (neo-vc-edited-face :foreground ,dracula-orange
+                                   :slant italic)
                (neo-vc-ignored-face :foreground ,dracula-comment)
-               (neo-vc-missing-face :foreground ,dracula-red)
+               (neo-vc-missing-face :foreground ,dracula-red
+                                    :weight bold)
                (neo-vc-needs-merge-face :foreground ,dracula-red
                                         :weight bold)
-               ;;(neo-vc-needs-update-face :underline t)
-               ;;(neo-vc-removed-face :strike-through t)
+               (neo-vc-needs-update-face :underline t)
+               (neo-vc-removed-face :foreground ,dracula-red
+                                    :strike-through t)
                (neo-vc-unlocked-changes-face :foreground ,dracula-red)
                ;;(neo-vc-unregistered-face nil)
                (neo-vc-up-to-date-face :foreground ,dracula-green)
@@ -1033,6 +1036,20 @@ read it before opening a new issue about your will.")
                (undo-tree-visualizer-default-face :foreground ,fg2)
                (undo-tree-visualizer-register-face :foreground ,dracula-purple)
                (undo-tree-visualizer-unmodified-face :foreground ,dracula-fg)
+               ;; VC
+               (vc-conflict-state :foreground ,dracula-red)
+               (vc-edited-state :foreground ,dracula-orange
+                                :slant italic)
+               (vc-ignored-state :foreground ,dracula-comment)
+               (vc-locally-added-state :foreground ,dracula-orange)
+               (vc-locked-state :foreground ,dracula-red
+                                :weight bold)
+               (vc-missing-state :foreground ,dracula-red
+                                 :weight bold)
+               (vc-needs-update-state :underline t)
+               (vc-removed-state :foreground ,dracula-red
+                                 :strike-through t)
+               (vc-up-to-date-state :foreground ,dracula-green)
                ;; web-mode
                (web-mode-builtin-face :inherit font-lock-builtin-face)
                (web-mode-comment-face :inherit font-lock-comment-face)
