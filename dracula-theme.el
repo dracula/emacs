@@ -184,9 +184,9 @@ read it before opening a new issue about your will.")
                 ;; official foreground
                 (dracula-fg      "#f8f8f2" "#ffffff" "white")
                 ;; official current-line/selection
-                (dracula-current "#44475a" "#303030" "brightblack")
+                (dracula-current "#44475a" "#5f5f87" "brightblack")
                 ;; dracula-current with fake 75% alpha
-                (dracula-region  "#454759" "#303030" "brightblack")
+                (dracula-region  "#454759" "#3a3a3a" "brightblack")
                 ;; official comment
                 (dracula-comment "#6272a4" "#5f5faf" "blue")
                 ;; official cyan
@@ -194,13 +194,13 @@ read it before opening a new issue about your will.")
                 ;; official green
                 (dracula-green   "#50fa7b" "#5fff87" "green")
                 ;; official orange
-                (dracula-orange  "#ffb86c" "#ffaf5f" "brightred")
+                (dracula-orange  "#ffb86c" "#ffaf5f" "red")
                 ;; official pink
                 (dracula-pink    "#ff79c6" "#ff87d7" "magenta")
                 ;; official purple
                 (dracula-purple  "#bd93f9" "#af87ff" "brightmagenta")
                 ;; official red
-                (dracula-red     "#ff5555" "#ff8787" "red")
+                (dracula-red     "#ff5555" "#ff8787" "brightred")
                 ;; official yellow
                 (dracula-yellow  "#f1fa8c" "#ffff87" "yellow")
                 ;; Other colors
@@ -211,7 +211,7 @@ read it before opening a new issue about your will.")
                 (fg4        "#b6b6b2" "#b2b2b2" "white")
                 (dark-red   "#880000" "#870000" "red") ; 40% darker official variant
                 (dark-green "#037a22" "#00af00" "green") ; 40% darker official variant
-                (dark-blue  "#0189cc" "#0087ff" "brightblue")))
+                (dark-blue  "#0189cc" "#0087d7" "brightblue")))
       (faces '(;; default / basic faces
                (cursor :background ,fg3)
                (default :background ,dracula-bg :foreground ,dracula-fg)
