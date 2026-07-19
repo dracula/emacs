@@ -18,6 +18,14 @@
 
 ;;; News:
 
+;;;; Version 1.8.4
+
+;; Add a way to disable bold font
+;; Add support for vc-* faces
+;; Add support for link-visited face
+;; Small adjustements to 256 colors terminal scheme
+;; Improve current line / selection / region colors set and usage
+
 ;;;; Version 1.8.3
 
 ;; Add missing comma in front of lsp-ui-sideline-current-symbol color
