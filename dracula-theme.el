@@ -227,6 +227,7 @@ read it before opening a new issue about your will.")
                (lazy-highlight :foreground ,fg2 :background ,bg2)
                (line-number :slant italic :foreground ,bg3 :background ,dracula-bg)
                (link :foreground ,dracula-cyan :underline t)
+               (link-visited :foreground ,dracula-purple :underline t)
                (linum :inherit 'line-number)
                (match :background ,dracula-yellow :foreground ,dracula-bg)
                (menu :background ,dracula-current :inverse-video nil
