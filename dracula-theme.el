@@ -225,9 +225,9 @@ read it before opening a new issue about your will.")
                (info-quoted-name :foreground ,dracula-orange)
                (info-string :foreground ,dracula-yellow)
                (lazy-highlight :foreground ,fg2 :background ,bg2)
-               (link :foreground ,dracula-cyan :underline t)
-               (linum :slant italic :foreground ,bg3 :background ,dracula-bg)
                (line-number :slant italic :foreground ,bg3 :background ,dracula-bg)
+               (link :foreground ,dracula-cyan :underline t)
+               (linum :inherit 'line-number)
                (match :background ,dracula-yellow :foreground ,dracula-bg)
                (menu :background ,dracula-current :inverse-video nil
                      ,@(if dracula-alternate-mode-line-and-minibuffer
