@@ -23,6 +23,7 @@
 ;; Add a way to disable bold font
 ;; Add support for vc-* faces
 ;; Add support for link-visited face
+;; Add support for minibuffer-nonselected
 ;; Small adjustements to 256 colors terminal scheme
 ;; Improve current line / selection / region colors set and usage
 
@@ -242,6 +243,9 @@ read it before opening a new issue about your will.")
                      ,@(if dracula-alternate-mode-line-and-minibuffer
                            (list :foreground fg3)
                          (list :foreground dracula-fg)))
+               (minibuffer-nonselected :background ,dracula-yellow
+                                       :foreground ,dracula-red
+                                       :weight bold)
                (minibuffer-prompt
                 ,@(if dracula-alternate-mode-line-and-minibuffer
                       (list :weight 'normal :foreground dracula-fg)
