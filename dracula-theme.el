@@ -711,7 +711,7 @@ read it before opening a new issue about your will.")
                (magit-hash :foreground ,dracula-comment)
                (magit-dimmed :foreground ,dracula-comment)
                (magit-section-heading :foreground ,dracula-pink :weight bold)
-               (magit-section-highlight :background ,dracula-region :extend t)
+               (magit-section-highlight :background ,dracula-current :extend t)
                (magit-diff-context :foreground ,fg3 :extend t)
                (magit-diff-context-highlight :inherit magit-section-highlight
                                              :foreground ,dracula-fg)
